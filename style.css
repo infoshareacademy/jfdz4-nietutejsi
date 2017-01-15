@@ -18,12 +18,11 @@ form {
     padding: 2% 3%;
     cursor: pointer;
     background-color: #ff75af ;
+    border-left: 0;
+    transition: all 1s;
 }
 
 .sign-up-button:hover {
-    -moz-transition: all 1s;
-    -webkit-transition: all 1s;
-    transition: all 1s;
     background-color: #447ac2 ;
 }
 
@@ -31,6 +30,12 @@ form {
     text-align: center;
     margin-top: 1%;
     padding-top: 3%;
+}
+
+.sign-up-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .users-email {
