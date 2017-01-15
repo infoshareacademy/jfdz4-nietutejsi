@@ -18,13 +18,13 @@ form {
     border: 1px solid black;
     padding: 2% 3%;
     cursor: pointer;
-    background-color: #ff75af ;
+    background-color: #DF744A ;
     border-left: 0;
     transition: all 1s;
 }
 
 .sign-up-button:hover {
-    background-color: #447ac2 ;
+    background-color: #FEDCD2 ;
 }
 
 .sign-up-form {
