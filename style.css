@@ -46,3 +46,18 @@ form {
     width: 35%;
     text-align: center;
 }
+
+.sign-up-checkbox-text {
+    margin-top: 3%;
+    font-size: 0.6725em;
+}
+
+.sign-up-checkbox {
+    margin-top: 3%;
+}
+
+.sign-up-checkbox-wrapper {
+    display: flex;
+    width: 75%;
+    margin: auto;
+}
