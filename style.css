@@ -51,6 +51,7 @@ form {
     margin-top: 3%;
     font-size: 0.6725em;
     color: #4a4a4a;
+    display: inline;
 }
 
 .sign-up-checkbox {
@@ -59,7 +60,7 @@ form {
 }
 
 .sign-up-checkbox-wrapper {
-    display: flex;
+    display: inline;
     width: 75%;
     margin: auto;
 }
