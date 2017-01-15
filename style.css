@@ -55,10 +55,16 @@ form {
 
 .sign-up-checkbox {
     margin-top: 3%;
+    cursor: pointer;
 }
 
 .sign-up-checkbox-wrapper {
     display: flex;
     width: 75%;
     margin: auto;
+}
+
+.sign-up {
+    background-color: #8FD8D2;
+    padding: 32px;
 }
