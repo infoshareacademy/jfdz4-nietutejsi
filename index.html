@@ -10,11 +10,11 @@
     <div class="sign-up">
     <section>
         <h3>Chcesz być na bieżąco z naszym produktem? Zapisz się!<br>Wyślemy tylko jednego maila.</h3>
-        <form class="sign-up-form" action="" method="post">
+        <form name="signupForm" class="sign-up-form" action="" method="post">
             <div class="sign-up-wrapper">
                 <input type="email" name="email" placeholder="E-mail" required class="users-email">
                 <input type="hidden" name="receiver" value="placeholder@email.com">
-                <input type="submit" value="Zapisz się!" class="sign-up-button">
+                <input type="submit" value="Zapisz się!" class="sign-up-button" onclick="validateEmail()">
             </div>
         </form>
             <div class="sign-up-checkbox-wrapper">
@@ -24,6 +24,6 @@
     </section>
     </div>
 </main>
-
+<script src="script.js"></script>
 </body>
 </html>
