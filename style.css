@@ -69,3 +69,7 @@ form {
     background-color: #8FD8D2;
     padding: 32px;
 }
+
+input:focus {
+    outline:none !important;
+}
