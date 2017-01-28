@@ -1,4 +1,40 @@
 body {
-    background: white;
-    font-family: sans-serif;
+    background: #BFD8D2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #DF744A;
+    margin: 0;
+}
+.side-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.container {
+    background: url(koperty.png) no-repeat center #BFD8D2;
+    height: 950px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+
+}
+.side-title {
+    font-size: 80px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+main {
+    height: 800px;
+    text-align: center;
+
+
+
 }
