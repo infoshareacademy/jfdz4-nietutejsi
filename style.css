@@ -3,15 +3,34 @@
     margin: 2px;
     width: 40%;
     float: left;
+    border-style:outset;
+    border-radius: 12px;
+
 }
 .main_features span{
     display:inline-block;
     padding: 10px;
+
 }
 .main_features img {
     width: 100px;
+    padding:10px;
 }
 
 *{
     box-sizing: border-box;
+
+}
+.spandiv1 {
+    width: 74%;
+    float: right;
+    margin-top: 5%
+}
+.spandiv2 {
+    width: 66%;
+    float: right;
+    margin-top: 5%}
+
+div.main_features:hover {
+    background-color: #FEDCD2;
 }
