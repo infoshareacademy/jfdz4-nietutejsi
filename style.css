@@ -1,3 +1,9 @@
+.part{
+    height: 235px;
+    background-color: #BFD8D2;
+    padding-left: 10%;
+
+}
 .main_features{
     border: 3px solid #DF744A;
     margin: 2px;
@@ -5,6 +11,7 @@
     float: left;
     border-style:outset;
     border-radius: 12px;
+    color: #DF744A;
 
 }
 .main_features span{
@@ -19,17 +26,21 @@
 
 *{
     box-sizing: border-box;
+    margin:0 auto;
 
 }
 .spandiv1 {
     width: 74%;
     float: right;
-    margin-top: 5%
+    margin-top: 5%;
+
 }
 .spandiv2 {
     width: 66%;
     float: right;
-    margin-top: 5%}
+    margin-top: 5%
+
+}
 
 div.main_features:hover {
     background-color: #FEDCD2;
