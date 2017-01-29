@@ -49,7 +49,7 @@ form {
 
 .sign-up-checkbox-text {
     margin-top: 2.5%;
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: #4a4a4a;
     display: inline;
 }
@@ -78,4 +78,34 @@ form {
 
 input:focus {
     outline:none !important;
+}
+
+input[type=checkbox]#sign-up-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox]#sign-up-checkbox + label.css-label {
+    padding-left:30px;
+    height:25px;
+    display:inline-block;
+    line-height:25px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:25px;
+    vertical-align:middle;
+    cursor:pointer;
+
+}
+
+input[type=checkbox]#sign-up-checkbox:checked + label.css-label {
+    background-position: 0 -25px;
+}
+label.css-label {
+    margin-top: 1%;
+    background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_b38e7de94a8c47bac3ac5a214597beea.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
