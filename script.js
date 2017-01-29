@@ -7,3 +7,19 @@ function validateEmail() {
         return false;
     }
 }
+
+function checkTerms() {
+    if(document.signupForm.agreement.checked)
+    {
+        document.signupForm.submitemail.disabled=false;
+    }
+    else
+    {
+        document.signupForm.submitemail.disabled=true;
+        alert("Brak wyrażenia zgody");
+    }
+}
+
+function enableSubmit() {
+        document.signupForm.submitemail.disabled = false
+}

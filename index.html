@@ -14,13 +14,13 @@
             <div class="sign-up-wrapper">
                 <input type="email" name="email" placeholder="E-mail" required class="users-email">
                 <input type="hidden" name="receiver" value="placeholder@email.com">
-                <input type="submit" value="Zapisz się!" class="sign-up-button" onclick="validateEmail()">
+                <input type="submit" name="submitemail" value="Zapisz się!" id="sign-up-button" onclick="validateEmail(); checkTerms()">
             </div>
-        </form>
             <div class="sign-up-checkbox-wrapper">
-                <input type="checkbox" name="agreement" value="agreement" required title="Agreement" class="sign-up-checkbox">
+                <input type="checkbox" name="agreement" value="agreement" required title="Agreement" id="sign-up-checkbox" onclick="enableSubmit()">
                 <p class="sign-up-checkbox-text"> Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji handlowej w rozumieniu art. 10 ust. 1 ustawy z dnia 18 lipca 2002 roku o świadczeniu usług drogą elektroniczną od Wishbook Generator Życzeń sp. z o. o. z siedzibą w Gdańsku. </p>
             </div>
+        </form>
     </section>
     </div>
 </main>
