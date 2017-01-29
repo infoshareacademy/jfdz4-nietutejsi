@@ -1,6 +1,5 @@
 .onas {
     width: 80%;
-    background-color: #BFD8D2;
     margin: 0px auto;
     overflow: auto;
     padding: 30px 0px 30px 0px;
@@ -13,7 +12,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .inform{
     display: flex;
     justify-content: center;
@@ -34,9 +32,15 @@
     text-align: center;
 }
 
+.osoba h2{
+    color: #DF744A;
+}
+
 .osoba img {
     width: 80%;
     max-width: 300px;
     min-width: 100px;
 }
-
+body{
+    background-color: #BFD8D2;
+}
