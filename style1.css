@@ -1,0 +1,42 @@
+.all {
+    margin:0px auto;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.section{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    background-color: #BFD8D2;
+    align-content:space-between;
+    flex-wrap: wrap;
+
+}
+.one {
+    border: 3px solid #DF744A;
+    width: 40%;
+    margin: 2px;
+    border-style: outset;
+    border-radius: 12px;
+    color: #DF744A;
+    flex-wrap:wrap;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-grow:1.2;
+    flex-wrap:wrap;
+}
+
+.one img {
+    padding:0px 10px;
+    width:16%;
+}
+
+.text {
+    text-align: center;
+}
+
+
