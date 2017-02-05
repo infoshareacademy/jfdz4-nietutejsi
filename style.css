@@ -12,7 +12,7 @@ body {
     margin-bottom: 20px;
 
 }
-.container {
+.side-foto {
     background: url(koperty.png) no-repeat center #BFD8D2;
     height: 950px;
     display: flex;
@@ -44,4 +44,25 @@ main {
 
 
 
+}
+
+.navbar-default {
+    background: none;
+    border: 0;
+
+
+}
+
+.navbar-brand {
+    float:none;
+}
+.navbar-nav {
+    margin-top: 30px;
+}
+.navbar-brand img {
+    width:100%;
+    max-width: 150px;
+}
+.navbar-toggle {
+    margin-top: 50px;
 }
