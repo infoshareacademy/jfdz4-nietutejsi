@@ -71,3 +71,34 @@ main {
         padding-top: 4em;
     }
 }
+
+.onas {
+    width: 80%;
+    margin: 0px auto;
+    overflow: auto;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #DF744A;
+}
+
+.ikon img{
+    max-width: 30px;
+    margin: 5px;
+}
+.ikon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.osoba{
+    text-align: justify;
+}
