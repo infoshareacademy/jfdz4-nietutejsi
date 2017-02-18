@@ -1,9 +1,29 @@
+* {
+    font-family: 'Pangolin', cursive;
+}
+
 body {
     background: #BFD8D2;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #DF744A;
     margin: 0;
+}
+.parallax {
+    background-image: url('photo/paral.jpg');
+    height: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pop{
+    background-image: url('photo/paral.jpg');
+    height: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .side-header {
     width: 100%;
@@ -12,7 +32,7 @@ body {
     margin-bottom: 20px;
 }
 .side-foto {
-    background: url(koperty.png) no-repeat center #BFD8D2;
+    /*background: url(koperty.png) no-repeat center #BFD8D2;*/
     height: 950px;
     display: flex;
     align-items: stretch;
@@ -38,8 +58,8 @@ main {
     text-align: center;
 }
 .navbar-default {
-    background: none;
     border: 0;
+    margin-bottom: 0;
 }
 .navbar-brand {
     float:none;
@@ -164,6 +184,8 @@ form {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    width: 60%;
 }
 .sign-up {
     background-color: #BFD8D2;
