@@ -1,0 +1,16 @@
+.podpis{
+    text-decoration:none;
+    color: #DF744A;
+    text-align:center;
+}
+
+
+.obraz {
+max-width: 130px;
+    margin: 0 auto;
+}
+@media screen and (max-width:767px) {
+.one {
+    padding-top: 4em;
+}
+}
