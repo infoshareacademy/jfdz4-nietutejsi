@@ -246,3 +246,7 @@ label.css-label {
 .navbar-default {
   height: 120px;
 }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: white;
+}
