@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    background-color: #2d318b;
+    background-image: url("http://i.imgur.com/luDl8GO.png");
+    background-size: 77%;
+}
+
+body {
+    background-image: url("background.png");
+    margin: 0 0 100px 0;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#ampic {
+    float: left;
+    width: 600px;
+    margin-bottom: 16px;
+}
+
+#snowboard {
+    text-align: left
+}
+
+#snowboardpic, #poetrypic, #ampic {
+    width: 600px;
+}
+
+a.navheader {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+}
+
+a {
+    text-decoration: none;
+    cursor: auto;
+    color: #414dbb;
+}
+
+li.navsec {
+    transition: background-color 0.3s ease;
+}
+li.navsec:hover {
+    background-color: rgba(0, 5, 139, 0.6);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    padding: 8px 32px;
+}
+
+.contact-page {
+    display: block;
+    text-align: center;
+}
+
+.logo {
+    padding: 6px 0 0 6px;
+    box-shadow: 15px 16px 24px #b4b4b4;
+}
+
+
+.logo-text {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 16px;
+    color: white;
+    font-size: 1.75em;
+    text-shadow: 1px 1px 6px #696da7;
+}
+
+.index, .doswiadczenie, .kontakt, .mojeprojekty, .zainteresowania {
+    background-color: rgba(0, 5, 139, 0.8);
+}
+
+.hobby-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:20%;
+    height: auto;
+}
+
+#header-content-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#main-content-wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#footer-content-wrapper {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+h3, h4 {
+    text-align: center;
+    text-shadow: 1px 1px 6px #696da7;
+}
+
+
+h5 {
+    text-align: left;
+}
+
+h6 {
+    text-align: right;
+}
+
+/*#snowfall-animation {*/
+    /*background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');*/
+    /*height: 100%;*/
+    /*left: 0;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+    /*animation-name: snow-animation;*/
+    /*animation: snow-animation 10s linear infinite;*/
+/*}*/
+
+/*@keyframes snow-animation {*/
+    /*0% {background-position: 0 0, 0 0, 0 0;}*/
+    /*50% {background-position: 500px 500px, 100px 200px, -100px 150px;}*/
+    /*100% {background-position: 650px 1000px, 200px 400px, -100px 300px;}*/
+/*}*/
