@@ -1,0 +1,35 @@
+.main{
+    font-family:'Unica One';
+    width: 50%;
+    float:left;
+    padding-right: 90px;
+}
+h1 {
+    font-size:48px;
+    margin-bottom: 0.3em;
+    line-height:2em;
+    margin-top:0.1em;
+}
+
+.features1{
+    float:left;
+    height: 150px;
+}
+.features2{
+    clear:left;
+    height: 150px;
+}
+.business{
+    padding-top:190px;
+
+}
+.text {
+vertical-align: middle;
+    padding-bottom: 100px;
+    padding-left:40px;
+
+}
+
+* {
+    padding-left: 30px;
+}

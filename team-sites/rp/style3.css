@@ -1,0 +1,27 @@
+.all {
+    padding: 3em 2em 2em 2em;
+    width:1024px;
+    margin:0 auto;
+}
+#text-main {
+    font-family: 'Unica One';
+    float:left;
+
+}
+.main {
+    width:500px;
+}
+h1{
+    font-size:48px;
+    margin-bottom: 0.3em;
+    line-height:2em;
+    margin-top:0.1em;
+}
+.obrazki{
+    float:left;
+    border-top: 1px solid slategray;
+    padding-top: 3em;
+    width:1024px;
+
+
+}
