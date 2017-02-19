@@ -235,3 +235,7 @@ label.css-label {
     left: 0;
     right: 0;
 }
+
+.navbar-default .navbar-nav > li > a {
+    color: #DF744A;
+}
