@@ -224,3 +224,13 @@ label.css-label {
 .funkcjonalnosci {
     padding-top: 17px;
 }
+#onas{
+    border-top-style: dashed;
+}
+#menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
