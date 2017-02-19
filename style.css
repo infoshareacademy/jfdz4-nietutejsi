@@ -5,6 +5,7 @@ body {
     color: #DF744A;
     margin: 0;
 }
+
 .side-header {
     width: 100%;
     text-align: center;
@@ -12,6 +13,7 @@ body {
     margin-bottom: 20px;
 
 }
+
 .side-foto {
     background: url(koperty.png) no-repeat center #BFD8D2;
     height: 950px;
@@ -20,6 +22,7 @@ body {
     position: relative;
 
 }
+
 .side-title {
     font-size: 80px;
     text-align: center;
@@ -29,8 +32,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(ellipse at center, rgba(191,216,210,0.6) 0%,
-    rgba(191,216,210,0.69) 100%);
+    background: radial-gradient(ellipse at center, rgba(191, 216, 210, 0.6) 0%,
+    rgba(191, 216, 210, 0.69) 100%);
 
     width: 100%;
     height: 180px;
@@ -42,27 +45,27 @@ main {
     height: 800px;
     text-align: center;
 
-
-
 }
 
 .navbar-default {
     background: none;
     border: 0;
 
-
 }
 
 .navbar-brand {
-    float:none;
+    float: none;
 }
+
 .navbar-nav {
     margin-top: 30px;
 }
+
 .navbar-brand img {
-    width:100%;
+    width: 100%;
     max-width: 150px;
 }
+
 .navbar-toggle {
     margin-top: 50px;
 }
