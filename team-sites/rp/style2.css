@@ -1,0 +1,42 @@
+
+h1{
+
+    font-family: 'Aladin';font-size: 32px;
+    text-align:center;
+    text-transform: capitalize;
+}
+
+a:link, a:visited {
+    color:white;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    height:100px;
+    width:90%;
+    padding: 0 5%;
+    position:absolute;
+}
+.header li {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    color: white;
+}
+.main img{
+    padding-top: 70px;
+}
+.logo{
+
+    float:left;
+    padding-top: 10px;
+}

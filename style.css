@@ -1,5 +1,5 @@
 * {
-    font-family: 'Pangolin', cursive;
+  font-family: 'Pangolin', cursive;
 }
 
 body {
@@ -9,35 +9,40 @@ body {
     color: #DF744A;
     height: 100%;
 }
+
 .parallax {
-    background-image: url('photo/paral.jpg');
-    height: 50%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('photo/paral.jpg');
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.pop{
-    background-image: url('photo/paral.jpg');
-    height: 100px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.pop {
+  background-image: url('photo/paral.jpg');
+  height: 100px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .side-header {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 .side-foto {
-    /*background: url(koperty.png) no-repeat center #BFD8D2;*/
-    height: 950px;
-    display: flex;
-    align-items: stretch;
-    position: relative;
+  /*background: url(koperty.png) no-repeat center #BFD8D2;*/
+  height: 950px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
 }
+
 .side-title {
     font-size: 60px;
     text-align: center;
@@ -53,172 +58,205 @@ body {
     height: 150px;
     padding-top: 50px;
 }
+
 main {
-    height: 800px;
-    text-align: center;
+  height: 800px;
+  text-align: center;
 }
+
 .navbar-default {
-    border: 0;
-    margin-bottom: 0;
+  border: 0;
+  margin-bottom: 0;
 }
+
 .navbar-brand {
-    float:none;
+  float: none;
 }
+
 .navbar-nav {
-    margin-top: 30px;
+  margin-top: 30px;
 }
+
 .navbar-brand img {
-    width:100%;
-    max-width: 150px;
+  width: 100%;
+  max-width: 150px;
 }
+
 .navbar-toggle {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
-.podpis{
-    text-decoration:none;
-    color: #DF744A;
-    text-align:center;
+.podpis {
+  text-decoration: none;
+  color: #DF744A;
+  text-align: center;
 }
-
 
 .obraz {
-    max-width: 130px;
-    margin: 0 auto;
+  max-width: 130px;
+  margin: 0 auto;
 }
-@media screen and (max-width:767px) {
-    .one {
-        padding-top: 4em;
-    }
+
+@media screen and (max-width: 767px) {
+  .one {
+    padding-top: 4em;
+  }
 }
 
 .onas {
-    width: 80%;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 30px 0 30px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 30px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.inform{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: #DF744A;
+.inform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #DF744A;
 }
 
-.ikon img{
-    max-width: 30px;
-    margin: 5px;
+.ikon img {
+  max-width: 30px;
+  margin: 5px;
 }
-.ikon{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+.ikon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.osoba{
-    text-align: justify;
+
+.osoba {
+  text-align: justify;
 }
 
 section {
-    margin: 0 auto;
+  margin: 0 auto;
 }
+
 h2 {
-    text-align: center;
+  text-align: center;
 }
+
 form {
-    display: block;
+  display: block;
 }
+
 #sign-up-button {
-    width: 20%;
-    font-size: 1em;
-    border-radius: 0 15px 15px 0;
-    border: 1px solid black;
-    padding: 2% 3%;
-    cursor: pointer;
-    background-color: #DF744A ;
-    border-left: 0;
-    transition: all 1s;
+  width: 20%;
+  font-size: 1em;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid black;
+  padding: 2% 3%;
+  cursor: pointer;
+  background-color: #DF744A;
+  border-left: 0;
+  transition: all 1s;
 }
+
 #sign-up-button:hover {
-    background-color: #FEDCD2 ;
+  background-color: #FEDCD2;
 }
+
 .sign-up-form {
-    text-align: center;
-    margin-top: 1%;
+  text-align: center;
+  margin-top: 1%;
 }
+
 .sign-up-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black
 }
+
 .users-email {
-    padding: 2% 5%;
-    border-radius: 15px 0 0 15px;
-    border: 1px solid black;
-    font-size: 1em;
-    width: 35%;
-    text-align: center;
+  padding: 2% 5%;
+  border-radius: 15px 0 0 15px;
+  border: 1px solid black;
+  font-size: 1em;
+  width: 35%;
+  text-align: center;
 }
+
 .sign-up-checkbox-text {
-    margin-top: 2.5%;
-    font-size: 0.8em;
-    color: #4a4a4a;
-    display: inline;
+  margin-top: 2.5%;
+  font-size: 0.8em;
+  color: #4a4a4a;
+  display: inline;
 }
+
 #sign-up-checkbox {
-    margin-top: 3%;
-    cursor: pointer;
-    width: 39px;
-    height: 19px;
-    display: block;
-    float: left;
-    align-self: flex-start;
+  margin-top: 3%;
+  cursor: pointer;
+  width: 39px;
+  height: 19px;
+  display: block;
+  float: left;
+  align-self: flex-start;
 }
+
 .sign-up-checkbox-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
 }
+
 .sign-up {
-    background-color: #BFD8D2;
-    padding: 32px;
+  background-color: #BFD8D2;
+  padding: 32px;
 }
+
 input:focus {
-    outline:none !important;
+  outline: none !important;
 }
+
 input[type=checkbox]#sign-up-checkbox {
-    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
+
 input[type=checkbox]#sign-up-checkbox + label.css-label {
-    padding-left:30px;
-    height:25px;
-    display:inline-block;
-    line-height:25px;
-    background-repeat:no-repeat;
-    background-position: 0 0;
-    font-size:25px;
-    vertical-align:middle;
-    cursor:pointer;
+  padding-left: 30px;
+  height: 25px;
+  display: inline-block;
+  line-height: 25px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 25px;
+  vertical-align: middle;
+  cursor: pointer;
 }
+
 input[type=checkbox]#sign-up-checkbox:checked + label.css-label {
-    background-position: 0 -25px;
+  background-position: 0 -25px;
 }
+
 label.css-label {
-    margin-top: 1%;
-    background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_b38e7de94a8c47bac3ac5a214597beea.png);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  margin-top: 1%;
+  background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_b38e7de94a8c47bac3ac5a214597beea.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .funkcjonalnosci {
@@ -245,4 +283,10 @@ label.css-label {
 
 .navbar-default {
     height: 120px;
+
+  padding-top: 17px;
+}
+
+.podpis:hover {
+  text-decoration: none;
 }
