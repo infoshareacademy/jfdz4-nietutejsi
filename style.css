@@ -224,9 +224,7 @@ label.css-label {
 .funkcjonalnosci {
     padding-top: 17px;
 }
-#onas{
-    border-top-style: dashed;
-}
+
 #menu {
     position: fixed;
     z-index: 99;
@@ -238,4 +236,13 @@ label.css-label {
 
 .navbar-default .navbar-nav > li > a {
     color: #DF744A;
+}
+
+.move-down {
+    padding-top:120px;
+    margin-top:-120px;
+}
+
+.navbar-default {
+    height: 120px;
 }
