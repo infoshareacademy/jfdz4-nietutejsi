@@ -250,3 +250,7 @@ label.css-label {
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   background-color: white;
 }
+
+.navbar-default {
+  background: white;
+}
