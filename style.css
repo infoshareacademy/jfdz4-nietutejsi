@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #BFD8D2;
+  background: #e3edea;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #DF744A;
@@ -108,16 +108,18 @@ main {
   align-items: center;
   width: 100%;
   color: #DF744A;
+  padding: 20px;
 }
 
 .ikon img{
   max-width: 30px;
-  margin: 5px;
+  margin: 10px;
 }
 .ikon{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 25px
 }
 .osoba{
   text-align: justify;
@@ -265,3 +267,4 @@ label.css-label {
 .navbar-default {
   background: white;
 }
+
