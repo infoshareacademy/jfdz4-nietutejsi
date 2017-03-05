@@ -100,6 +100,7 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 .inform{
@@ -108,6 +109,7 @@ main {
   align-items: center;
   width: 100%;
   color: #DF744A;
+
 }
 
 .ikon img{
@@ -264,4 +266,18 @@ label.css-label {
 
 .navbar-default {
   background: white;
+}
+
+/*z js zmienna "html_code"*/
+.cookies-message {
+    padding: 10px 0px;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid #D3D0D0;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    background-color: #EFEFEF;
+    width: 100%;
+    z-index: 999;
 }
