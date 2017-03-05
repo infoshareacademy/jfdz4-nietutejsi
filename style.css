@@ -84,6 +84,7 @@ main {
 .obraz {
   max-width: 130px;
   margin: 0 auto;
+  color: #DF744A;
 }
 
 @media screen and (max-width:767px) {
