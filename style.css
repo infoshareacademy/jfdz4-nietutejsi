@@ -261,3 +261,7 @@ label.css-label {
   color: #DF744A;
   width: 150px;
 }
+
+.navbar-default {
+  background: white;
+}
