@@ -23,4 +23,4 @@ $(document).ready(function() {
     function enableSubmit() {
         document.signupForm.submitemail.disabled = false
     }
-}
+});
