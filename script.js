@@ -23,4 +23,23 @@ $(document).ready(function() {
     function enableSubmit() {
         document.signupForm.submitemail.disabled = false
     }
+
+    $(window).on("scroll", function() {
+
+        var currentPos = $(window).scrollTop();
+
+        $('nav li a').each(function() {
+
+            var sectionLink = $(this);
+            var navHeight = $('.navbar-default').outerHeight() + 1;
+            var section = $(sectionLink.attr('href'));
+
+            if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
+                $('nav li').removeClass('active');
+                sectionLink.parent().addClass('active');
+            } else {
+                sectionLink.parent().removeClass('active');
+            }
+        });
+    });
 });
