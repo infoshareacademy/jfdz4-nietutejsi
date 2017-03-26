@@ -36,7 +36,7 @@ function create() {
 
     game.physics.arcade.enable(dog);
 
-    envelope = game.add.sprite(750, 0, 'envelope');
+    envelope = game.add.sprite(((Math.random() * 714) + 50), ((Math.random() * 523) + 50), 'envelope');
 
     envelope.scale.setTo(0.6, 0.6);
 
