@@ -27,7 +27,18 @@ function create() {
 
     game.physics.arcade.enable(player);
 
-    dog = game.add.sprite((Math.random() * 768), (Math.random() * 568), 'dog');
+    for (var i = 0; i < 1;) {
+        dog = game.add.sprite((Math.random() * 768), (Math.random() * 568), 'dog');
+        if (player.x - 32 < dog.x && dog.x < player.x + 23) {
+            dog.kill();
+            i = 0;
+        } else if (player.y - 32 < dog.y && dog.y < player.y + 43) {
+            dog.kill();
+            i = 0;
+        } else {
+            i++;
+        }
+    }
 
     dog.animations.add('left', [3, 4, 5], 7, true);
     dog.animations.add('right', [6, 7, 8], 7, true);
