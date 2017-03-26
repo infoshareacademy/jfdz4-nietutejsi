@@ -38,6 +38,8 @@ function create() {
 
     envelope = game.add.sprite(750, 0, 'envelope');
 
+    envelope.scale.setTo(0.6, 0.6);
+
     cursors = game.input.keyboard.createCursorKeys();
 
     player.body.collideWorldBounds = true;
