@@ -37,6 +37,7 @@ function create() {
 
     cursors = game.input.keyboard.createCursorKeys();
 
+    player.body.collideWorldBounds = true;
 }
 
 function update() {
