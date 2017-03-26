@@ -7,11 +7,12 @@ function preload() {
     game.load.image('envelope', 'assets/sprites/envelope.png');
     game.load.image('horObstacle', 'assets/sprites/obstacleHorizontal.png');
     game.load.image('verObstacle', 'assets/sprites/obstacleVertical.png');
-    game.load.spritesheet('dog', 'assets/sprites/dogsprite.png');
+    game.load.spritesheet('dog', 'assets/sprites/dogsprite.png', 32, 32);
     game.load.spritesheet('player', 'assets/sprites/postman.png', 23, 43);
 
     var player;
     var cursors;
+    var dog;
 }
 
 function create() {
@@ -24,6 +25,15 @@ function create() {
     player.animations.add('down', [1, 2, 3], 7, true);
 
     game.physics.arcade.enable(player);
+
+    dog = game.add.sprite(0, 0, 'dog');
+
+    dog.animations.add('left', [3, 4, 5], 7, true);
+    dog.animations.add('right', [6, 7, 8], 7, true);
+    dog.animations.add('up', [9, 10, 11], 7, true);
+    dog.animations.add('down', [0, 1, 2], 7, true);
+
+    game.physics.arcade.enable(dog);
 
     cursors = game.input.keyboard.createCursorKeys();
 
