@@ -27,7 +27,7 @@ function create() {
 
     game.physics.arcade.enable(player);
 
-    dog = game.add.sprite(0, 0, 'dog');
+    dog = game.add.sprite((Math.random() * 768), (Math.random() * 568), 'dog');
 
     dog.animations.add('left', [3, 4, 5], 7, true);
     dog.animations.add('right', [6, 7, 8], 7, true);
