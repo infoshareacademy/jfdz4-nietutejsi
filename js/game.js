@@ -12,6 +12,7 @@ function preload() {
 }
 
 function create() {
+    game.add.sprite(377, 300, 'player');
 }
 
 function update() {
