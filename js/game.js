@@ -8,7 +8,7 @@ function preload() {
     game.load.image('horObstacle', 'assets/sprites/obstacleHorizontal.png');
     game.load.image('verObstacle', 'assets/sprites/obstacleVertical.png');
     game.load.spritesheet('dog', 'assets/sprites/dogsprite.png');
-    game.load.spritesheet('player', 'assets/sprites/postman.png')
+    game.load.spritesheet('player', 'assets/sprites/postman.png', 23, 43)
 }
 
 function create() {
