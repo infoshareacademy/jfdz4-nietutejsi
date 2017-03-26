@@ -13,6 +13,7 @@ function preload() {
     var player;
     var cursors;
     var dog;
+    var envelope;
 }
 
 function create() {
@@ -34,6 +35,8 @@ function create() {
     dog.animations.add('down', [0, 1, 2], 7, true);
 
     game.physics.arcade.enable(dog);
+
+    envelope = game.add.sprite(750, 0, 'envelope');
 
     cursors = game.input.keyboard.createCursorKeys();
 
