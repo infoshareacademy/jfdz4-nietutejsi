@@ -12,6 +12,7 @@ function preload() {
 }
 
 function create() {
+    game.stage.backgroundColor = '#124184';
     game.add.sprite(377, 300, 'player');
 }
 
