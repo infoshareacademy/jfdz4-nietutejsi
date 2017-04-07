@@ -46,10 +46,8 @@ function create() {
     dog.animations.add('down', [0, 1, 2], 7, true);
 
     game.physics.arcade.enable(dog);
-for (var j = 0; j < 1;) {
-    if (player.x < 400)
-        envelope = game.add.sprite(((Math.random() * 314) + 450), ((Math.random() * 523) + 50), 'envelope');
-}
+
+    envelope = game.add.sprite(((Math.random() * 714) + 50), ((Math.random() * 523) + 50), 'envelope');
 
     envelope.scale.setTo(0.6, 0.6);
 
