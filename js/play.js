@@ -32,10 +32,11 @@ var playState = {
 
         game.physics.arcade.enable(dog);
 
+
         envelope = game.add.sprite(((Math.random() * 714) + 50), ((Math.random() * 523) + 50), 'envelope');
 
         envelope.scale.setTo(0.6, 0.6);
-
+        game.physics.arcade.enable(envelope);
         cursors = game.input.keyboard.createCursorKeys();
 
         player.body.collideWorldBounds = true;
@@ -44,6 +45,7 @@ var playState = {
     update: function() {
         // game.physics.arcade.collide(player,dog);
         game.physics.arcade.overlap(player, dog, killPlayer, null, this);
+        game.physics.arcade.overlap(player, envelope, collectEnvelope, null, this);
         player.body.velocity.set(0);
         if (cursors.left.isDown) {
             player.body.velocity.x = -100;
@@ -64,10 +66,15 @@ var playState = {
             player.animations.stop();
             player.frame = 0;
         }
+        dog.x +=1;
+
     }
 };
 
 
 function killPlayer (player, dog) {
     player.kill();
+}
+function collectEnvelope(player, envelope) {
+    envelope.kill();
 }
