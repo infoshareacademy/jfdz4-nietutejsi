@@ -4,7 +4,9 @@ var playState = {
 
         game.stage.backgroundColor = '#124184';
 
-        text = game.add.text(0, 0, "Score: " + 0, {font: '20px Arial', fill: '#ffffff'});
+        scoreCounter = game.add.text(0, 0, "Score: " + 0, {font: '20px Arial', fill: '#ffffff'});
+        envelopeNumberCounter = game.add.text(0, 25, "Envelopes: " + 0, {font: '20px Arial', fill: '#ffffff'});
+        timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
 
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
