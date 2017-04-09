@@ -30,8 +30,15 @@ var playState = {
 
         player.body.collideWorldBounds = true;
         dog.body.collideWorldBounds = true;
+
+      var dogDirectionRandomizer = Math.ceil(Math.random() *2);
+      if (dogDirectionRandomizer === 1) {
         dog.body.velocity.x = 100;
         dog.play('right');
+      } else {
+        dog.body.velocity.y = 100;
+        dog.play('down');
+      }
 
         player.scale.setTo(1.3, 1.3);
         dog.scale.setTo(1.3, 1.3);
