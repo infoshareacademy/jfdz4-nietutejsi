@@ -78,12 +78,14 @@ main {
   text-decoration:none;
   color: #DF744A;
   text-align:center;
+
 }
 
 
 .obraz {
   max-width: 130px;
   margin: 0 auto;
+  color: #DF744A;
 }
 
 @media screen and (max-width:767px) {
@@ -91,7 +93,9 @@ main {
     padding-top: 4em;
   }
 }
-
+div.one p {
+  font-size: 15px;
+}
 .onas {
   width: 80%;
   margin: 0 auto;
