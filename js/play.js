@@ -3,6 +3,9 @@ var playState = {
     create: function() {
 
         game.stage.backgroundColor = '#124184';
+
+        text = game.add.text(0, 0, "Score: " + 0, {font: '20px Arial', fill: '#ffffff'});
+
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
