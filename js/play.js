@@ -32,6 +32,9 @@ var playState = {
         dog.body.collideWorldBounds = true;
         dog.body.velocity.x = 100;
         dog.play('right');
+
+        player.scale.setTo(1.3, 1.3);
+        dog.scale.setTo(1.3, 1.3);
     },
 
     update: function() {
@@ -58,7 +61,7 @@ var playState = {
             player.frame = 0;
         }
 
-        if (dog.x === 768) {
+        if (dog.x === 758.4) {
             dog.body.velocity.x = -100;
             dog.play('left');
         } else if (dog.x === 0) {
