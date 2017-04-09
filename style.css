@@ -276,7 +276,7 @@ label.css-label {
     border-bottom: 1px solid #D3D0D0;
     text-align: center;
     position: fixed;
-    top: 610px;/*to raczej nie jest dobrze*/
+    bottom: 0;
     background-color: #EFEFEF;
     width: 100%;
     z-index: 999;
