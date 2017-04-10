@@ -16,7 +16,6 @@ var playState = {
         player.animations.add('down', [1, 2, 3], 7, true);
 
         game.physics.arcade.enable(player);
-//THIS SHIT
         var dogs = game.add.group();
         for (i = 0; i < 2; i++) {
             dog = dogs.create(getAndRemoveFromArray(levelOneLayout.dogXLayout), getAndRemoveFromArray(levelOneLayout.dogYLayout), 'dog');
@@ -39,7 +38,6 @@ var playState = {
 
             dog.scale.setTo(1.3, 1.3);
         }
-        // END OF THIS SHIT
 
         envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
 
