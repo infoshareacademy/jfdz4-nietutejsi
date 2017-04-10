@@ -80,6 +80,10 @@ var playState = {
             dog.body.velocity.x = 100;
             dog.play('right');
         }
+
+        if (player.exists === false) {
+            game.state.start('lose');
+        }
     }
 };
 
