@@ -19,7 +19,7 @@ var playState = {
 //THIS SHIT
         var dogs = game.add.group();
         for (i = 0; i < 2; i++) {
-            dog = game.add.sprite(getAndRemoveFromArray(levelOneLayout.dogXLayout), getAndRemoveFromArray(levelOneLayout.dogYLayout), 'dog');
+            dog = dogs.create(getAndRemoveFromArray(levelOneLayout.dogXLayout), getAndRemoveFromArray(levelOneLayout.dogYLayout), 'dog');
             dog.animations.add('left', [3, 4, 5], 7, true);
             dog.animations.add('right', [6, 7, 8], 7, true);
             dog.animations.add('up', [9, 10, 11], 7, true);
@@ -38,7 +38,6 @@ var playState = {
             dog.body.collideWorldBounds = true;
 
             dog.scale.setTo(1.3, 1.3);
-            dogs.add(dog);
         }
         // END OF THIS SHIT
 
@@ -77,7 +76,6 @@ var playState = {
             player.animations.stop();
             player.frame = 0;
         }
-
         if (dog.x === 758.4) {
             dog.body.velocity.x = -100;
             dog.play('left');
@@ -85,7 +83,6 @@ var playState = {
             dog.body.velocity.x = 100;
             dog.play('right');
         }
-
         if (player.exists === false) {
             game.state.start('lose');
         }
