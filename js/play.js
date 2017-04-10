@@ -16,15 +16,31 @@ var playState = {
         player.animations.add('down', [1, 2, 3], 7, true);
 
         game.physics.arcade.enable(player);
+//THIS SHIT
+        var dogs = game.add.group();
+        for (i = 0; i < 2; i++) {
+            dog = game.add.sprite(getAndRemoveFromArray(levelOneLayout.dogXLayout), getAndRemoveFromArray(levelOneLayout.dogYLayout), 'dog');
+            dog.animations.add('left', [3, 4, 5], 7, true);
+            dog.animations.add('right', [6, 7, 8], 7, true);
+            dog.animations.add('up', [9, 10, 11], 7, true);
+            dog.animations.add('down', [0, 1, 2], 7, true);
+            game.physics.arcade.enable(dog);
 
-        dog = game.add.sprite(levelOneLayout.dogXLayout[Math.floor(Math.random() * 3)], levelOneLayout.dogYLayout[Math.floor(Math.random() * 2)], 'dog');
+            var dogDirectionRandomizer = Math.ceil(Math.random() * 2);
+            if (dogDirectionRandomizer === 1) {
+                dog.body.velocity.x = 100;
+                dog.play('right');
+            } else {
+                dog.body.velocity.y = 100;
+                dog.play('down');
+            }
 
-        dog.animations.add('left', [3, 4, 5], 7, true);
-        dog.animations.add('right', [6, 7, 8], 7, true);
-        dog.animations.add('up', [9, 10, 11], 7, true);
-        dog.animations.add('down', [0, 1, 2], 7, true);
+            dog.body.collideWorldBounds = true;
 
-        game.physics.arcade.enable(dog);
+            dog.scale.setTo(1.3, 1.3);
+            dogs.add(dog);
+        }
+        // END OF THIS SHIT
 
         envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
 
@@ -34,19 +50,8 @@ var playState = {
         cursors = game.input.keyboard.createCursorKeys();
 
         player.body.collideWorldBounds = true;
-        dog.body.collideWorldBounds = true;
-
-      var dogDirectionRandomizer = Math.ceil(Math.random() *2);
-      if (dogDirectionRandomizer === 1) {
-        dog.body.velocity.x = 100;
-        dog.play('right');
-      } else {
-        dog.body.velocity.y = 100;
-        dog.play('down');
-      }
 
         player.scale.setTo(1.3, 1.3);
-        dog.scale.setTo(1.3, 1.3);
     },
 
     update: function() {
@@ -95,6 +100,13 @@ var levelOneLayout = {
     envelopeXLayout: [300, 500],
     envelopeYLayout: [150, 250, 350, 450]
 };
+
+function getAndRemoveFromArray(arr) {
+    var itemIndex = Math.floor(Math.random() * arr.length);
+    var itemValue = arr[itemIndex];
+    arr.splice(itemIndex,1);
+    return itemValue;
+}
 
 function killPlayer (player, dog) {
     player.kill();
