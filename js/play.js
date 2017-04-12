@@ -10,10 +10,10 @@ var playState = {
 
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
-        player.animations.add('left', [4, 5, 6, 7], 7, true);
-        player.animations.add('right', [8, 9, 10, 11], 7, true);
-        player.animations.add('up', [12, 13, 14, 15], 7, true);
-        player.animations.add('down', [1, 2, 3], 7, true);
+        player.animations.add('left', [4, 5, 6, 7], 7 + animationBurden, true);
+        player.animations.add('right', [8, 9, 10, 11], 7 + animationBurden, true);
+        player.animations.add('up', [12, 13, 14, 15], 7 + animationBurden, true);
+        player.animations.add('down', [1, 2, 3], 7 + animationBurden, true);
 
         game.physics.arcade.enable(player);
         var dogs = game.add.group();
@@ -55,19 +55,19 @@ var playState = {
         game.physics.arcade.overlap(player, envelope, collectEnvelope, null, this);
         player.body.velocity.set(0);
         if (cursors.left.isDown) {
-            player.body.velocity.x = -100;
+            player.body.velocity.x = -100 * envelopeBurden;
             player.play('left');
         }
         else if (cursors.right.isDown) {
-            player.body.velocity.x = 100;
+            player.body.velocity.x = 100 * envelopeBurden;
             player.play('right');
         }
         else if (cursors.up.isDown) {
-            player.body.velocity.y = -100;
+            player.body.velocity.y = -100 * envelopeBurden;
             player.play('up');
         }
         else if (cursors.down.isDown) {
-            player.body.velocity.y = 100;
+            player.body.velocity.y = 100 * envelopeBurden;
             player.play('down');
         } else {
             player.animations.stop();
@@ -93,7 +93,8 @@ var playState = {
                 scoreCounter.text = 'Score: ' + (scoreValue * scoreMultiplier).toFixed(0);
                 scoreMultiplier += 0.2;
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
-
+                envelopeBurden -= 0.05;
+                animationBurden += 1;
             }
         }
 };
@@ -101,6 +102,8 @@ var dogsGroup;
 var scoreValue = 0;
 var envelopeValue = 0;
 var scoreMultiplier = 1;
+var envelopeBurden = 1;
+var animationBurden = 0;
 
 var levelOneLayout = {
     dogXLayout: [200, 400, 600],
