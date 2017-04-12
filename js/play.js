@@ -42,7 +42,7 @@ var playState = {
             group = dogs;
         }
 
-        envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
+        createEnvelope();
 
         envelope.scale.setTo(0.6, 0.6);
         game.physics.arcade.enable(envelope);
@@ -114,4 +114,8 @@ function killPlayer (player, dog) {
 }
 function collectEnvelope(player, envelope) {
     envelope.kill();
+}
+
+function createEnvelope() {
+    envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
 }
