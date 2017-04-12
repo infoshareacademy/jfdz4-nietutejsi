@@ -55,7 +55,6 @@ var playState = {
     },
 
     update: function() {
-        game.physics.arcade.overlap(player, dog, killPlayer, null, this);
         game.physics.arcade.overlap(player, envelope, collectEnvelope, null, this);
         player.body.velocity.set(0);
         if (cursors.left.isDown) {
@@ -78,6 +77,7 @@ var playState = {
             player.frame = 0;
         }
         group.forEach(function (dog){
+            game.physics.arcade.overlap(player, dog, killPlayer, null, this);
             if (dog.x === 758.4) {
                 dog.body.velocity.x = -100;
                 dog.play('left');
@@ -85,10 +85,10 @@ var playState = {
                 dog.body.velocity.x = 100;
                 dog.play('right');
             }
+        });
             if (player.exists === false) {
                 game.state.start('lose');
             }
-        });
         }
 };
 var dogsGroup;
