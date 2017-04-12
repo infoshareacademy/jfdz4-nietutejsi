@@ -44,9 +44,6 @@ var playState = {
 
         createEnvelope();
 
-        envelope.scale.setTo(0.6, 0.6);
-        game.physics.arcade.enable(envelope);
-
         cursors = game.input.keyboard.createCursorKeys();
 
         player.body.collideWorldBounds = true;
@@ -89,6 +86,9 @@ var playState = {
             if (player.exists === false) {
                 game.state.start('lose');
             }
+            if (envelope.exists === false) {
+                createEnvelope();
+            }
         }
 };
 var dogsGroup;
@@ -118,4 +118,6 @@ function collectEnvelope(player, envelope) {
 
 function createEnvelope() {
     envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
+    envelope.scale.setTo(0.6, 0.6);
+    game.physics.arcade.enable(envelope);
 }
