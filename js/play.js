@@ -90,7 +90,8 @@ var playState = {
                 createEnvelope();
                 scoreValue += 10;
                 envelopeValue += 1;
-                scoreCounter.text = 'Score: ' + scoreValue;
+                scoreCounter.text = 'Score: ' + (scoreValue * scoreMultiplier).toFixed(0);
+                scoreMultiplier += 0.2;
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
 
             }
@@ -99,6 +100,7 @@ var playState = {
 var dogsGroup;
 var scoreValue = 0;
 var envelopeValue = 0;
+var scoreMultiplier = 1;
 
 var levelOneLayout = {
     dogXLayout: [200, 400, 600],
