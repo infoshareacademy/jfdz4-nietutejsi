@@ -36,7 +36,10 @@ var playState = {
 
             dog.body.collideWorldBounds = true;
 
-            dog.scale.setTo(1.3, 1.3);
+            dogs.forEach(function (dog) {
+                dog.scale.setTo(1.3, 1.3);
+            });
+            group = dogs;
         }
 
         envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
@@ -74,18 +77,21 @@ var playState = {
             player.animations.stop();
             player.frame = 0;
         }
-        if (dog.x === 758.4) {
-            dog.body.velocity.x = -100;
-            dog.play('left');
-        } else if (dog.x === 0) {
-            dog.body.velocity.x = 100;
-            dog.play('right');
+        group.forEach(function (dog){
+            if (dog.x === 758.4) {
+                dog.body.velocity.x = -100;
+                dog.play('left');
+            } else if (dog.x === 0) {
+                dog.body.velocity.x = 100;
+                dog.play('right');
+            }
+            if (player.exists === false) {
+                game.state.start('lose');
+            }
+        });
         }
-        if (player.exists === false) {
-            game.state.start('lose');
-        }
-    }
 };
+var dogsGroup;
 
 var levelOneLayout = {
     dogXLayout: [200, 400, 600],
