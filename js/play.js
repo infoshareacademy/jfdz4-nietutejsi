@@ -94,7 +94,7 @@ var playState = {
                 scoreMultiplier += 0.2;
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
                 envelopeBurden -= 0.05;
-                animationBurden += 1;
+                animationSpeedUp += 1;
             }
         }
 };
@@ -103,7 +103,7 @@ var scoreValue = 0;
 var envelopeValue = 0;
 var scoreMultiplier = 1;
 var envelopeBurden = 1;
-var animationBurden = 0;
+var animationSpeedUp = 0;
 
 var levelOneLayout = {
     dogXLayout: [200, 400, 600],
