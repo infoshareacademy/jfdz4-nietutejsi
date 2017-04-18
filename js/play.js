@@ -106,12 +106,12 @@ var envelopeBurden = 1;
 var animationSpeedUp = 0;
 
 var levelOneLayout = {
-    dogXLayout: [200, 400, 600],
-    dogYLayout: [200, 400],
-    playerXLayout: [100, 700],
-    playerYLayout: [100, 500],
-    envelopeXLayout: [300, 500],
-    envelopeYLayout: [150, 250, 350, 450]
+    dogXLayout: [224, 416, 608],
+    dogYLayout: [224, 416],
+    playerXLayout: [128, 704],
+    playerYLayout: [128, 512],
+    envelopeXLayout: [320, 512],
+    envelopeYLayout: [160, 288, 352, 480]
 };
 
 function getAndRemoveFromArray(arr) {
