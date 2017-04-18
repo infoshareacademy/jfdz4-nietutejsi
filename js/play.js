@@ -3,19 +3,7 @@ var playState = {
     create: function() {
 
         game.add.image(0, 0, 'levelOneTilemap');
-        scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
-        envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
-        timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
 
-        player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
-
-        player.animations.add('left', [4, 5, 6, 7], 7, true);
-        player.animations.add('right', [8, 9, 10, 11], 7, true);
-        player.animations.add('up', [12, 13, 14, 15], 7, true);
-        player.animations.add('down', [1, 2, 3], 7, true);
-
-        game.physics.arcade.enable(player);
-        player.body.setSize(23, 17, 0, 26);
         var dogs = game.add.group();
         for (i = 0; i < 2; i++) {
             dog = dogs.create(getAndRemoveFromArray(levelOneLayout.dogXLayout), getAndRemoveFromArray(levelOneLayout.dogYLayout), 'dog');
@@ -42,6 +30,16 @@ var playState = {
             group = dogs;
         }
 
+        player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
+
+        player.animations.add('left', [4, 5, 6, 7], 7, true);
+        player.animations.add('right', [8, 9, 10, 11], 7, true);
+        player.animations.add('up', [12, 13, 14, 15], 7, true);
+        player.animations.add('down', [1, 2, 3], 7, true);
+
+        game.physics.arcade.enable(player);
+        player.body.setSize(23, 17, 0, 26);
+
         createEnvelope();
 
         cursors = game.input.keyboard.createCursorKeys();
@@ -49,6 +47,10 @@ var playState = {
         player.body.collideWorldBounds = true;
 
         player.scale.setTo(1.3, 1.3);
+
+        scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
+        envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
+        timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
     },
 
     update: function() {
