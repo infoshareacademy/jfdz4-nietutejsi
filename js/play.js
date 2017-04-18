@@ -15,6 +15,7 @@ var playState = {
         player.animations.add('down', [1, 2, 3], 7, true);
 
         game.physics.arcade.enable(player);
+        player.body.setSize(23, 17, 0, 26);
         var dogs = game.add.group();
         for (i = 0; i < 2; i++) {
             dog = dogs.create(getAndRemoveFromArray(levelOneLayout.dogXLayout), getAndRemoveFromArray(levelOneLayout.dogYLayout), 'dog');
