@@ -10,10 +10,10 @@ var playState = {
 
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
-        player.animations.add('left', [4, 5, 6, 7], 7 + animationBurden, true);
-        player.animations.add('right', [8, 9, 10, 11], 7 + animationBurden, true);
-        player.animations.add('up', [12, 13, 14, 15], 7 + animationBurden, true);
-        player.animations.add('down', [1, 2, 3], 7 + animationBurden, true);
+        player.animations.add('left', [4, 5, 6, 7], 7, true);
+        player.animations.add('right', [8, 9, 10, 11], 7, true);
+        player.animations.add('up', [12, 13, 14, 15], 7, true);
+        player.animations.add('down', [1, 2, 3], 7, true);
 
         game.physics.arcade.enable(player);
         var dogs = game.add.group();
