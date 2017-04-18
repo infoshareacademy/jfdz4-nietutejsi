@@ -2,8 +2,7 @@ var playState = {
 
     create: function() {
 
-        game.stage.backgroundColor = '#124184';
-
+        game.add.image(0, 0, 'levelOneTilemap');
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
         envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
         timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
