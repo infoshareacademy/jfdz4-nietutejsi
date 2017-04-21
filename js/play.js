@@ -129,6 +129,8 @@ var playState = {
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
         envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
         timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
+
+        envelopeSound = game.add.audio('collectEnvelopeSound');
     },
 
     update: function() {
@@ -180,6 +182,7 @@ var playState = {
             }
             if (envelope.exists === false) {
                 createEnvelope();
+                envelopeSound.play();
                 game.world.bringToTop(player);
                 scoreValue += 10;
                 envelopeValue += 1;
