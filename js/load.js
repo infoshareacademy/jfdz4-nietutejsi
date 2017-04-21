@@ -9,6 +9,7 @@ var loadState= {
         game.load.spritesheet('dog', 'assets/sprites/dogsprite.png', 32, 32);
         game.load.spritesheet('player', 'assets/sprites/postman.png', 23, 43);
         game.load.image('levelOneTilemap', 'assets/sprites/levelOneTilemap.png');
+        game.load.image('invisibleWall', 'assets/sprites/invisibleWall.png');
 
 
     },
