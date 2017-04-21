@@ -162,6 +162,14 @@ var playState = {
                 dog.body.velocity.x = 100;
                 dog.play('right');
             }
+            else if (dog.y === 558.4) {
+                dog.body.velocity.y = -100;
+                dog.play('up');
+            }
+            else if (dog.y === 0) {
+                dog.body.velocity.y = 100;
+                dog.play('down');
+            }
         });
         group2.forEach(function (wall) {
            game.physics.arcade.collide(wall, player);
