@@ -204,7 +204,7 @@ var levelOneLayout = {
     playerXLayout: [128, 704],
     playerYLayout: [128, 512],
     envelopeXLayout: [320, 512],
-    envelopeYLayout: [160, 288, 352, 480]
+    envelopeYLayout: [160, 320, 480]
 };
 
 function getAndRemoveFromArray(arr) {
