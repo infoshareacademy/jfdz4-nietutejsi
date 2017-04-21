@@ -30,6 +30,15 @@ var playState = {
             group = dogs;
         }
 
+        var invisibleWalls = game.add.group();
+        for(i = 0; i < 6; i++) {
+            inviWall = invisibleWalls.create(i * 32, 288, 'invisWallTest');
+            game.physics.enable(inviWall);
+            inviWall.body.immovable = true;
+            inviWall.collideWorldBounds = true;
+
+            group2 = invisibleWalls;
+        }
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
@@ -84,6 +93,9 @@ var playState = {
                 dog.body.velocity.x = 100;
                 dog.play('right');
             }
+        });
+        group2.forEach(function (wall) {
+           game.physics.arcade.collide(wall, player);
         });
             if (player.exists === false) {
                 game.state.start('lose');
