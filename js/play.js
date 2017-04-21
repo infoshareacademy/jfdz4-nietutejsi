@@ -82,6 +82,34 @@ var playState = {
 
         createEnvelope();
 
+        randomRecRandomizer = Math.floor(Math.random() * 5);
+        if (randomRecRandomizer === 0) {
+            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'darkman');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+        } else if (randomRecRandomizer === 1) {
+            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'nutcracker');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+        } else if (randomRecRandomizer === 2) {
+            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'tracker');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+        } else if (randomRecRandomizer === 3) {
+            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'warrior');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+        } else if (randomRecRandomizer === 4) {
+            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'youngWoman');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+        }
+
         player = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
@@ -138,6 +166,7 @@ var playState = {
         group2.forEach(function (wall) {
            game.physics.arcade.collide(wall, player);
         });
+        game.physics.arcade.collide(randomReceivent, player);
             if (player.exists === false) {
                 game.state.start('lose');
             }
