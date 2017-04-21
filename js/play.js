@@ -166,7 +166,7 @@ var playState = {
         group2.forEach(function (wall) {
            game.physics.arcade.collide(wall, player);
         });
-        game.physics.arcade.collide(randomReceivent, player);
+        game.physics.arcade.collide(randomReceivent, player, giveInEnvelopes);
             if (player.exists === false) {
                 game.state.start('lose');
             }
@@ -217,4 +217,11 @@ function createEnvelope() {
     envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
     envelope.scale.setTo(0.6, 0.6);
     game.physics.arcade.enable(envelope);
+}
+
+function giveInEnvelopes() {
+    envelopeValue = 0;
+    envelopeBurden = 1;
+    envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
+    scoreMultiplier = 1;
 }
