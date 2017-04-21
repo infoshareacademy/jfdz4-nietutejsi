@@ -39,6 +39,46 @@ var playState = {
 
             group2 = invisibleWalls;
         }
+        for(i = 1; i <= 2; i++) {
+            inviWall = invisibleWalls.create(160, 288 + (i * 32), 'invisWallTest');
+            game.physics.enable(inviWall);
+            inviWall.body.immovable = true;
+            inviWall.collideWorldBounds = true;
+
+            group2 = invisibleWalls;
+        }
+        for(i = 0; i < 5; i++) {
+            inviWall = invisibleWalls.create(i * 32, 384, 'invisWallTest' );
+            game.physics.enable(inviWall);
+            inviWall.body.immovable = true;
+            inviWall.collideWorldBounds = true;
+
+            group2 = invisibleWalls;
+        }
+        for(i = 0; i < 3; i++) {
+            inviWall = invisibleWalls.create(256 + (i * 32), 576 - (i * 32), 'invisWallTest' );
+            game.physics.enable(inviWall);
+            inviWall.body.immovable = true;
+            inviWall.collideWorldBounds = true;
+
+            group2 = invisibleWalls;
+        }
+        for(i = 0; i < 2; i++) {
+            inviWall = invisibleWalls.create(320 + (i * 32), 480, 'invisWallTest' );
+            game.physics.enable(inviWall);
+            inviWall.body.immovable = true;
+            inviWall.collideWorldBounds = true;
+
+            group2 = invisibleWalls;
+        }
+        for(i = 0; i < 3; i++) {
+            inviWall = invisibleWalls.create(384, 512 + (i * 32), 'invisWallTest' );
+            game.physics.enable(inviWall);
+            inviWall.body.immovable = true;
+            inviWall.collideWorldBounds = true;
+
+            group2 = invisibleWalls;
+        }
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
