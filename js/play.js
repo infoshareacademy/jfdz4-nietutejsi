@@ -79,6 +79,9 @@ var playState = {
 
             group2 = invisibleWalls;
         }
+
+        createEnvelope();
+
         player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
@@ -88,8 +91,6 @@ var playState = {
 
         game.physics.arcade.enable(player);
         player.body.setSize(23, 17, 0, 26);
-
-        createEnvelope();
 
         cursors = game.input.keyboard.createCursorKeys();
 
@@ -142,6 +143,7 @@ var playState = {
             }
             if (envelope.exists === false) {
                 createEnvelope();
+                game.world.bringToTop(player);
                 scoreValue += 10;
                 envelopeValue += 1;
                 scoreCounter.text = 'Score: ' + (scoreValue * scoreMultiplier).toFixed(0);
