@@ -32,7 +32,7 @@ var playState = {
 
         var invisibleWalls = game.add.group();
         for(i = 0; i < 6; i++) {
-            inviWall = invisibleWalls.create(i * 32, 288, 'invisWallTest');
+            inviWall = invisibleWalls.create(i * 32, 288, 'invisibleWall');
             game.physics.enable(inviWall);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
@@ -40,7 +40,7 @@ var playState = {
             group2 = invisibleWalls;
         }
         for(i = 1; i <= 2; i++) {
-            inviWall = invisibleWalls.create(160, 288 + (i * 32), 'invisWallTest');
+            inviWall = invisibleWalls.create(160, 288 + (i * 32), 'invisibleWall');
             game.physics.enable(inviWall);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
@@ -48,7 +48,7 @@ var playState = {
             group2 = invisibleWalls;
         }
         for(i = 0; i < 5; i++) {
-            inviWall = invisibleWalls.create(i * 32, 384, 'invisWallTest' );
+            inviWall = invisibleWalls.create(i * 32, 384, 'invisibleWall' );
             game.physics.enable(inviWall);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
@@ -56,7 +56,7 @@ var playState = {
             group2 = invisibleWalls;
         }
         for(i = 0; i < 3; i++) {
-            inviWall = invisibleWalls.create(256 + (i * 32), 576 - (i * 32), 'invisWallTest' );
+            inviWall = invisibleWalls.create(256 + (i * 32), 576 - (i * 32), 'invisibleWall' );
             game.physics.enable(inviWall);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
@@ -64,7 +64,7 @@ var playState = {
             group2 = invisibleWalls;
         }
         for(i = 0; i < 2; i++) {
-            inviWall = invisibleWalls.create(320 + (i * 32), 480, 'invisWallTest' );
+            inviWall = invisibleWalls.create(320 + (i * 32), 480, 'invisibleWall' );
             game.physics.enable(inviWall);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
@@ -72,7 +72,7 @@ var playState = {
             group2 = invisibleWalls;
         }
         for(i = 0; i < 3; i++) {
-            inviWall = invisibleWalls.create(384, 512 + (i * 32), 'invisWallTest' );
+            inviWall = invisibleWalls.create(384, 512 + (i * 32), 'invisibleWall' );
             game.physics.enable(inviWall);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
