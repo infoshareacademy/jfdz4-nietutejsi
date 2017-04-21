@@ -82,7 +82,7 @@ var playState = {
 
         createEnvelope();
 
-        player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * 2)], levelOneLayout.playerYLayout[Math.floor(Math.random() * 2)], 'player');
+        player = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
         player.animations.add('right', [8, 9, 10, 11], 7, true);
