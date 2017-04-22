@@ -84,33 +84,33 @@ var playState = {
 
         randomRecRandomizer = Math.floor(Math.random() * 5);
         if (randomRecRandomizer === 0) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.randomRecXLayout), getAndRemoveFromArray(levelOneLayout.randomRecYLayout), 'darkman');
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'darkman');
             randomReceivent.scale.setTo(1.2, 1.2);
             game.physics.arcade.enable(randomReceivent);
             randomReceivent.body.immovable = true;
         } else if (randomRecRandomizer === 1) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.randomRecXLayout), getAndRemoveFromArray(levelOneLayout.randomRecYLayout), 'nutcracker');
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'nutcracker');
             randomReceivent.scale.setTo(1.2, 1.2);
             game.physics.arcade.enable(randomReceivent);
             randomReceivent.body.immovable = true;
         } else if (randomRecRandomizer === 2) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.randomRecXLayout), getAndRemoveFromArray(levelOneLayout.randomRecYLayout), 'tracker');
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'tracker');
             randomReceivent.scale.setTo(1.2, 1.2);
             game.physics.arcade.enable(randomReceivent);
             randomReceivent.body.immovable = true;
         } else if (randomRecRandomizer === 3) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.randomRecXLayout), getAndRemoveFromArray(levelOneLayout.randomRecYLayout), 'warrior');
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'warrior');
             randomReceivent.scale.setTo(1.2, 1.2);
             game.physics.arcade.enable(randomReceivent);
             randomReceivent.body.immovable = true;
         } else if (randomRecRandomizer === 4) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.randomRecXLayout), getAndRemoveFromArray(levelOneLayout.randomRecYLayout), 'youngWoman');
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'youngWoman');
             randomReceivent.scale.setTo(1.2, 1.2);
             game.physics.arcade.enable(randomReceivent);
             randomReceivent.body.immovable = true;
         }
 
-        player = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'player');
+        player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * levelOneLayout.playerXLayout.length)], levelOneLayout.playerYLayout[Math.floor(Math.random() * levelOneLayout.playerYLayout.length)], 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
         player.animations.add('right', [8, 9, 10, 11], 7, true);
