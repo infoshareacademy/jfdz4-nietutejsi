@@ -191,6 +191,7 @@ var playState = {
                 createEnvelope();
                 envelopeSound.play();
                 game.world.bringToTop(player);
+                game.world.bringToTop(randomReceivent);
                 scoreValue += 10;
                 envelopeValue += 1;
                 scoreCounter.text = 'Score: ' + (scoreValue * scoreMultiplier).toFixed(0);
@@ -198,6 +199,12 @@ var playState = {
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
                 envelopeBurden -= 0.05;
                 animationSpeedUp += 1;
+                noRep += 1;
+                if (noRep === 1) {
+                    levelOneLayout.envelopeYLayout = [160, 320, 480];
+                    levelOneLayout.envelopeXLayout = [320, 512];
+                    noRep = 0;
+                }
             }
         }
 };
@@ -207,6 +214,7 @@ var envelopeValue = 0;
 var scoreMultiplier = 1;
 var envelopeBurden = 1;
 var animationSpeedUp = 0;
+var noRep = 0;
 
 var levelOneLayout = {
     dogXLayout: [224, 416, 608],
@@ -234,7 +242,7 @@ function collectEnvelope(player, envelope) {
 }
 
 function createEnvelope() {
-    envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
+    envelope = game.add.sprite(getAndRemoveFromArray(levelOneLayout.envelopeXLayout), getAndRemoveFromArray(levelOneLayout.envelopeYLayout), 'envelope');
     envelope.scale.setTo(0.6, 0.6);
     game.physics.arcade.enable(envelope);
 }
