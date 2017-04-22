@@ -178,6 +178,8 @@ var playState = {
         });
         game.physics.arcade.collide(randomReceivent, player, giveInEnvelopes);
             if (player.exists === false) {
+                levelOneLayout.dogXLayout = [224, 416, 608];
+                levelOneLayout.dogYLayout = [224, 416];
                 game.state.start('lose');
             }
             if (envelope.exists === false) {
