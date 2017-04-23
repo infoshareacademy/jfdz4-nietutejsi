@@ -21,6 +21,12 @@ $( document ).ready(function() {
     $('.hide-game').click(function() {
         $('#game-handler').removeClass('game-handler-shown');
         $('#game-handler').addClass('game-handler-hidden');
+        $('.show-game-shown').removeClass('show-game-hidden');
+    });
+    $('.show-game-shown').click(function() {
+       $('#game-handler').removeClass('game-handler-hidden');
+       $('#game-handler').addClass('game-handler-shown');
+       $('.show-game-shown').addClass('show-game-hidden');
     });
     $(window).on("scroll", function() {
 

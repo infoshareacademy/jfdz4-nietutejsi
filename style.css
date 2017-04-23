@@ -278,7 +278,7 @@ label.css-label {
   height: 650px;
   top: 20%;
   left: 27%;
-  background-color: pink;
+  background-color: #e3edea;
 
   z-index:99999;
 }
@@ -303,6 +303,19 @@ label.css-label {
   background: url('assets/buttons/hideGame.png');
   width: 25px;
   height: 25px;
+}
+
+.show-game-shown {
+  position: fixed;
+  top: 97.5%;
+  left: 0;
+  height: 25px;
+  padding: 2px;
+  background-color: #e3edea;
+}
+
+.show-game-hidden {
+  display: none;
 }
 
 .cookies-message {
