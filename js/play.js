@@ -102,7 +102,7 @@ var playState = {
 
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
         envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
-        timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
+        timeLeftCounter = game.add.text(680, 0, 'Time left: ' + seconds, {font: '20px Arial', fill: '#ffffff'});
 
         envelopeSound = game.add.audio('collectEnvelopeSound');
         startGameTimer();
@@ -230,6 +230,7 @@ function giveInEnvelopes() {
 }
 
 function startGameTimer() {
+    seconds = 60;
     gameTimer = setInterval(function() {
         timeLeftCounter.text = 'Time left: ' + seconds;
         seconds -= 1;
