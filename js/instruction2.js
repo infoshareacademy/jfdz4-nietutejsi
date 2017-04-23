@@ -5,21 +5,28 @@ var instructionState2 = {
 
     create: function () {
 
-        game.add.text(330, 8, 'CEL GRY', {
+        game.add.text(330, 50, 'POSTACIE', {
+            font: '50px Arial', fill: '#ffffff'
+        });
+        game.add.text(10, 100, ' najwięcej\n punktów.', {
             font: '30px Arial', fill: '#ffffff'
         });
-        game.add.text(8, 50, 'Zadaniem gracza jest w ciągu 60 sekund zebranie kopert, przekazanie ich odbiorcy\n i zgromadzenie, jak najwięcej punktów.', {
-            font: '20px Arial', fill: '#ffffff'
-        });
 
-        game.add.button(0, 0, 'jumpLeft', foo);
+        game.add.button(10, 500, 'jumpLeft', foo);
+        game.add.button(730, 500, 'jumpRight', foo1);
     },
 
     backToMenu: function () {
         game.state.start('menu');
+    },
+    moveToNextInstruction: function() {
+        game.state.start('instruction1');
     }
 };
 
 function foo() {
-    game.state.start('menu');
+    instructionState.backToMenu();
+}
+function foo1() {
+    instructionState.moveToNextInstruction();
 }
