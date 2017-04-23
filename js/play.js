@@ -162,9 +162,9 @@ var playState = {
                 envelopeSound.play();
                 game.world.bringToTop(player);
                 game.world.bringToTop(randomReceivent);
-                scoreValue += 10;
+                scoreValue += 10 * scoreMultiplier;
                 envelopeValue += 1;
-                scoreCounter.text = 'Score: ' + (scoreValue * scoreMultiplier).toFixed(0);
+                scoreCounter.text = 'Score: ' + scoreValue.toFixed(0);
                 scoreMultiplier += 0.2;
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
                 envelopeBurden -= 0.05;
@@ -186,6 +186,7 @@ var envelopeBurden = 1;
 var animationSpeedUp = 0;
 var noRep = 0;
 var seconds = 60;
+var scoreBonus = 0;
 
 var levelOneLayout = {
     dogXLayout: [224, 416, 608],
@@ -224,6 +225,7 @@ function giveInEnvelopes() {
         envelopeBurden = 1;
         envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
         scoreMultiplier = 1;
+        scoreBonus = 0;
         randomReceivent.kill();
         createRandomReceivent();
     }
