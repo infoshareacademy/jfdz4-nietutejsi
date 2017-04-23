@@ -3,12 +3,16 @@
   /*font-family: 'Raleway', sans-serif;*/
   font-family: 'Titillium Web', sans-serif;
 }
+body {
+  min-width: 325px;
+}
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   margin: auto;
   width: 100%;
-  max-height: 800px;
+  max-height: 900px;
+  min-height: 399px;
 }
 .wow {
   visibility: hidden;
@@ -32,9 +36,9 @@ img#myphoto:hover{
 .slider {
   position: relative;
 }
-.btn-denger{
-  border-radius: 24px;
-}
+/*.btn-denger{*/
+  /*border-radius: 24px;*/
+/*}*/
 h2{
   padding-bottom: 20px;
   padding-top: 20px;
@@ -160,14 +164,11 @@ div.one p {
   color: #DF744A;
   padding-top: 2.3em;
   padding-bottom: 1.7em;
+  text-align: center;
 }
-.one{
+.one {
   padding: 1.5em;
-  background-color: #0D3349;
 }
-/*.one:hover {*/
-  /*background-color: black;*/
-/*}*/
 
 .ikon img{
   max-width: 30px;
