@@ -18,6 +18,10 @@ $( document ).ready(function() {
             alert("Brak wyrażenia zgody");
         }
     });
+    $('.hide-game').click(function() {
+        $('#game-handler').removeClass('game-handler-shown');
+        $('#game-handler').addClass('game-handler-hidden');
+    });
     $(window).on("scroll", function() {
 
         var currentPos = $(window).scrollTop();
