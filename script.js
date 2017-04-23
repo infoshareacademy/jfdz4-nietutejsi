@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    $('.dimmer').hide();
     $('#sign-up-button').click(function () {
         var x = document.forms["signupForm"]["email"].value;
         var atpos = x.indexOf("@");
@@ -11,7 +10,7 @@ $( document ).ready(function() {
             $('.users-email').val('');
             $('#game-handler').removeClass('game-handler-hidden');
             $('#game-handler').addClass('game-handler-shown');
-            $('.dimmer').show();
+            $('.dimmer-shown').removeClass('dimmer-hidden');
             return false;
         }
         else
@@ -24,13 +23,13 @@ $( document ).ready(function() {
         $('#game-handler').removeClass('game-handler-shown');
         $('#game-handler').addClass('game-handler-hidden');
         $('.show-game-shown').removeClass('show-game-hidden');
-        $('.dimmer').hide();
+        $('.dimmer-shown').addClass('dimmer-hidden');
     });
     $('.show-game-shown').click(function() {
        $('#game-handler').removeClass('game-handler-hidden');
        $('#game-handler').addClass('game-handler-shown');
        $('.show-game-shown').addClass('show-game-hidden');
-        $('.dimmer').show();
+       $('.dimmer-shown').removeClass('dimmer-hidden');
     });
     $(window).on("scroll", function() {
 
