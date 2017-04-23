@@ -136,6 +136,7 @@ var playState = {
         timeLeftCounter = game.add.text(680, 0, 'Time left: ' + 60, {font: '20px Arial', fill: '#ffffff'});
 
         envelopeSound = game.add.audio('collectEnvelopeSound');
+        startGameTimer();
     },
 
     update: function() {
@@ -215,6 +216,7 @@ var scoreMultiplier = 1;
 var envelopeBurden = 1;
 var animationSpeedUp = 0;
 var noRep = 0;
+var seconds = 0;
 
 var levelOneLayout = {
     dogXLayout: [224, 416, 608],
@@ -252,4 +254,12 @@ function giveInEnvelopes() {
     envelopeBurden = 1;
     envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
     scoreMultiplier = 1;
+}
+
+function startGameTimer() {
+    seconds = 60;
+    gameTimer = setInterval(function() {
+        timeLeftCounter.text = 'Time left: ' + seconds;
+        seconds -= 1;
+    }, 1000);
 }
