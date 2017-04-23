@@ -15,6 +15,9 @@ var loadState= {
         game.load.spritesheet('youngWoman', 'assets/sprites/youngWoman.png', 32, 48);
         game.load.image('levelOneTilemap', 'assets/sprites/levelOneTilemap.png');
         game.load.image('invisibleWall', 'assets/sprites/invisibleWall.png');
+        game.load.image('beginGameButton', 'assets/buttons/beginGameButton.png');
+        game.load.image('instructionButton', 'assets/buttons/instructionButton.png');
+        game.load.image('replayButton', 'assets/buttons/reaplyButton.png');
         game.load.audio('collectEnvelopeSound', 'assets/sounds/collectEnvelopeSound.mp3');
     },
 
