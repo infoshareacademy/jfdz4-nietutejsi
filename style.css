@@ -265,3 +265,18 @@ label.css-label {
 .navbar-default {
   background: white;
 }
+
+.game-handler-shown {
+  position: fixed;
+  width: 850px;
+  height: 650px;
+  top: 20%;
+  left: 27%;
+  background-color: pink;
+  z-index:99999;
+}
+
+.game-handler-hidden {
+  display:none;
+}
+
