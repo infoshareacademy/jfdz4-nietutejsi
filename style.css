@@ -158,7 +158,16 @@ div.one p {
   align-items: center;
   width: 100%;
   color: #DF744A;
+  padding-top: 2.3em;
+  padding-bottom: 1.7em;
 }
+.one{
+  padding: 1.5em;
+  background-color: #0D3349;
+}
+/*.one:hover {*/
+  /*background-color: black;*/
+/*}*/
 
 .ikon img{
   max-width: 30px;
@@ -276,7 +285,8 @@ label.css-label {
 }
 
 .funkcjonalnosci {
-  padding-top: 17px;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 #menu {
