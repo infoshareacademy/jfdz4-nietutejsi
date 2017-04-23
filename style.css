@@ -123,12 +123,14 @@ main {
   text-decoration:none;
   color: #DF744A;
   text-align:center;
+
 }
 
 
 .obraz {
   max-width: 130px;
   margin: 0 auto;
+  color: #DF744A;
 }
 
 @media screen and (max-width:767px) {
@@ -136,7 +138,9 @@ main {
     padding-top: 4em;
   }
 }
-
+div.one p {
+  font-size: 15px;
+}
 .onas {
   width: 80%;
   margin: 0 auto;
@@ -145,6 +149,7 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 .inform{
@@ -153,7 +158,6 @@ main {
   align-items: center;
   width: 100%;
   color: #DF744A;
-  padding: 20px;
 }
 
 .ikon img{
@@ -316,3 +320,39 @@ label.css-label {
   background: white;
 }
 
+.game-handler-shown {
+  position: fixed;
+  width: 850px;
+  height: 650px;
+  top: 20%;
+  left: 27%;
+  background-color: pink;
+
+  z-index:99999;
+}
+
+.game-handler-hidden {
+  display:none;
+}
+
+.game-handler-center {
+  padding: 12.5px;
+}
+
+.game-handler-center2 {
+  float: left;
+  padding: 12.5px;
+}
+
+.cookies-message {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid #D3D0D0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #EFEFEF;
+    width: 100%;
+    z-index: 999;
+}
