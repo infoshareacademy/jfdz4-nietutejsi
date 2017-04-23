@@ -97,39 +97,8 @@ var playState = {
         player.body.collideWorldBounds = true;
 
         player.scale.setTo(1.3, 1.3);
-
-        randomRecRandomizer = Math.floor(Math.random() * 5);
-        if (randomRecRandomizer === 0) {
-            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'darkman');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-            randomReceivent.body.setSize(23, 17, 0, 26);
-        } else if (randomRecRandomizer === 1) {
-            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'nutcracker');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-            randomReceivent.body.setSize(23, 17, 0, 26);
-        } else if (randomRecRandomizer === 2) {
-            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'tracker');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-            randomReceivent.body.setSize(23, 17, 0, 26);
-        } else if (randomRecRandomizer === 3) {
-            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'warrior');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-            randomReceivent.body.setSize(23, 17, 0, 26);
-        } else if (randomRecRandomizer === 4) {
-            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'youngWoman');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-            randomReceivent.body.setSize(23, 17, 0, 26);
-        }
+        
+        createRandomReceivent();
 
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
         envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
@@ -216,7 +185,7 @@ var scoreMultiplier = 1;
 var envelopeBurden = 1;
 var animationSpeedUp = 0;
 var noRep = 0;
-var seconds = 0;
+var seconds = 60;
 
 var levelOneLayout = {
     dogXLayout: [224, 416, 608],
@@ -250,19 +219,61 @@ function createEnvelope() {
 }
 
 function giveInEnvelopes() {
-    envelopeValue = 0;
-    envelopeBurden = 1;
-    envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
-    scoreMultiplier = 1;
+    if(envelopeValue >= 1) {
+        envelopeValue = 0;
+        envelopeBurden = 1;
+        envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
+        scoreMultiplier = 1;
+        randomReceivent.kill();
+        createRandomReceivent();
+    }
 }
 
 function startGameTimer() {
-    seconds = 60;
     gameTimer = setInterval(function() {
         timeLeftCounter.text = 'Time left: ' + seconds;
         seconds -= 1;
         if (player.exists === false) {
             clearInterval(gameTimer);
+        } else if (seconds === 0) {
+            levelOneLayout.dogXLayout = [224, 416, 608];
+            levelOneLayout.dogYLayout = [224, 416];
+            game.state.start('lose');
         }
     }, 1000);
+}
+
+function createRandomReceivent() {
+    randomRecRandomizer = Math.floor(Math.random() * 5);
+    if (randomRecRandomizer === 0) {
+        randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'darkman');
+        randomReceivent.scale.setTo(1.2, 1.2);
+        game.physics.arcade.enable(randomReceivent);
+        randomReceivent.body.immovable = true;
+        randomReceivent.body.setSize(23, 17, 0, 26);
+    } else if (randomRecRandomizer === 1) {
+        randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'nutcracker');
+        randomReceivent.scale.setTo(1.2, 1.2);
+        game.physics.arcade.enable(randomReceivent);
+        randomReceivent.body.immovable = true;
+        randomReceivent.body.setSize(23, 17, 0, 26);
+    } else if (randomRecRandomizer === 2) {
+        randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'tracker');
+        randomReceivent.scale.setTo(1.2, 1.2);
+        game.physics.arcade.enable(randomReceivent);
+        randomReceivent.body.immovable = true;
+        randomReceivent.body.setSize(23, 17, 0, 26);
+    } else if (randomRecRandomizer === 3) {
+        randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'warrior');
+        randomReceivent.scale.setTo(1.2, 1.2);
+        game.physics.arcade.enable(randomReceivent);
+        randomReceivent.body.immovable = true;
+        randomReceivent.body.setSize(23, 17, 0, 26);
+    } else if (randomRecRandomizer === 4) {
+        randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'youngWoman');
+        randomReceivent.scale.setTo(1.2, 1.2);
+        game.physics.arcade.enable(randomReceivent);
+        randomReceivent.body.immovable = true;
+        randomReceivent.body.setSize(23, 17, 0, 26);
+    }
 }
