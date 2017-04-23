@@ -318,7 +318,7 @@ label.css-label {
   display: none;
 }
 
-.dimmer {
+.dimmer-shown {
   background:#000;
   opacity:0.5;
   position:fixed; /* important to use fixed, not absolute */
@@ -327,6 +327,10 @@ label.css-label {
   width:100%;
   height:100%;
   z-index:9999; /* may not be necessary */
+}
+
+.dimmer-hidden {
+  display: none;
 }
 
 .cookies-message {
