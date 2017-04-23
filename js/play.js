@@ -82,35 +82,7 @@ var playState = {
 
         createEnvelope();
 
-        randomRecRandomizer = Math.floor(Math.random() * 5);
-        if (randomRecRandomizer === 0) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'darkman');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-        } else if (randomRecRandomizer === 1) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'nutcracker');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-        } else if (randomRecRandomizer === 2) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'tracker');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-        } else if (randomRecRandomizer === 3) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'warrior');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-        } else if (randomRecRandomizer === 4) {
-            randomReceivent = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'youngWoman');
-            randomReceivent.scale.setTo(1.2, 1.2);
-            game.physics.arcade.enable(randomReceivent);
-            randomReceivent.body.immovable = true;
-        }
-
-        player = game.add.sprite(getAndRemoveFromArray(levelOneLayout.playerXLayout), getAndRemoveFromArray(levelOneLayout.playerYLayout), 'player');
+        player = game.add.sprite(levelOneLayout.playerXLayout[Math.floor(Math.random() * levelOneLayout.playerXLayout.length)], levelOneLayout.playerYLayout[Math.floor(Math.random() * levelOneLayout.playerYLayout.length)], 'player');
 
         player.animations.add('left', [4, 5, 6, 7], 7, true);
         player.animations.add('right', [8, 9, 10, 11], 7, true);
@@ -125,6 +97,39 @@ var playState = {
         player.body.collideWorldBounds = true;
 
         player.scale.setTo(1.3, 1.3);
+
+        randomRecRandomizer = Math.floor(Math.random() * 5);
+        if (randomRecRandomizer === 0) {
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'darkman');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+            randomReceivent.body.setSize(23, 17, 0, 26);
+        } else if (randomRecRandomizer === 1) {
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'nutcracker');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+            randomReceivent.body.setSize(23, 17, 0, 26);
+        } else if (randomRecRandomizer === 2) {
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'tracker');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+            randomReceivent.body.setSize(23, 17, 0, 26);
+        } else if (randomRecRandomizer === 3) {
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'warrior');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+            randomReceivent.body.setSize(23, 17, 0, 26);
+        } else if (randomRecRandomizer === 4) {
+            randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'youngWoman');
+            randomReceivent.scale.setTo(1.2, 1.2);
+            game.physics.arcade.enable(randomReceivent);
+            randomReceivent.body.immovable = true;
+            randomReceivent.body.setSize(23, 17, 0, 26);
+        }
 
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
         envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
@@ -178,12 +183,15 @@ var playState = {
         });
         game.physics.arcade.collide(randomReceivent, player, giveInEnvelopes);
             if (player.exists === false) {
+                levelOneLayout.dogXLayout = [224, 416, 608];
+                levelOneLayout.dogYLayout = [224, 416];
                 game.state.start('lose');
             }
             if (envelope.exists === false) {
                 createEnvelope();
                 envelopeSound.play();
                 game.world.bringToTop(player);
+                game.world.bringToTop(randomReceivent);
                 scoreValue += 10;
                 envelopeValue += 1;
                 scoreCounter.text = 'Score: ' + (scoreValue * scoreMultiplier).toFixed(0);
@@ -191,6 +199,12 @@ var playState = {
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
                 envelopeBurden -= 0.05;
                 animationSpeedUp += 1;
+                noRep += 1;
+                if (noRep === 1) {
+                    levelOneLayout.envelopeYLayout = [160, 320, 480];
+                    levelOneLayout.envelopeXLayout = [320, 512];
+                    noRep = 0;
+                }
             }
         }
 };
@@ -200,6 +214,7 @@ var envelopeValue = 0;
 var scoreMultiplier = 1;
 var envelopeBurden = 1;
 var animationSpeedUp = 0;
+var noRep = 0;
 
 var levelOneLayout = {
     dogXLayout: [224, 416, 608],
@@ -207,7 +222,9 @@ var levelOneLayout = {
     playerXLayout: [128, 704],
     playerYLayout: [128, 512],
     envelopeXLayout: [320, 512],
-    envelopeYLayout: [160, 320, 480]
+    envelopeYLayout: [160, 320, 480],
+    randomRecXLayout: [160, 640],
+    randomRecYLayout: [128, 512]
 };
 
 function getAndRemoveFromArray(arr) {
@@ -225,7 +242,7 @@ function collectEnvelope(player, envelope) {
 }
 
 function createEnvelope() {
-    envelope = game.add.sprite(levelOneLayout.envelopeXLayout[Math.floor(Math.random() * 2)], levelOneLayout.envelopeYLayout[Math.floor(Math.random() * 3)], 'envelope');
+    envelope = game.add.sprite(getAndRemoveFromArray(levelOneLayout.envelopeXLayout), getAndRemoveFromArray(levelOneLayout.envelopeYLayout), 'envelope');
     envelope.scale.setTo(0.6, 0.6);
     game.physics.arcade.enable(envelope);
 }
