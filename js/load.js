@@ -18,6 +18,8 @@ var loadState= {
         game.load.image('beginGameButton', 'assets/buttons/beginGameButton.png');
         game.load.image('instructionButton', 'assets/buttons/instructionButton.png');
         game.load.image('replayButton', 'assets/buttons/replayButton.png');
+        game.load.image('jumpLeft', 'assets/buttons/jumpLeft.png');
+        game.load.image('jumpRight', 'assets/buttons/jumpRight.png');
         game.load.audio('collectEnvelopeSound', 'assets/sounds/collectEnvelopeSound.mp3');
     },
 
