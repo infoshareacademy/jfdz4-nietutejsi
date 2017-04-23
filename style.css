@@ -1,25 +1,75 @@
 * {
-  font-family: 'Pangolin', cursive;
+  /*font-family: 'Pangolin', cursive;*/
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Titillium Web', sans-serif;
+}
+body {
+  min-width: 325px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: auto;
+  width: 100%;
+  max-height: 900px;
+  min-height: 399px;
+}
+.wow {
+  visibility: hidden;
+}
+img#myphoto:hover{
+  opacity : 0.70;
+  filter : alpha(opacity=70);
+}
+.zajawka.span{
+  font-size: 100px;
+}
+.zajawka{
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.slider {
+  position: relative;
+}
+/*.btn-denger{*/
+  /*border-radius: 24px;*/
+/*}*/
+h2{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.zajawka-btn a{
+  font-size: 1.5em;
+}
+.zajawka-btn {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.zajawka span {
+  font-size: 2em;
+  color: #691812;
 }
 
 body {
-  background: #e3edea;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #DF744A;
   height: 100%;
 }
-.parallax {
-  background-image: url('a1c8853632e84f2533de7b7ba2254428.jpg');
-  height: 50%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .pop{
-  background-image: url('a1c8853632e84f2533de7b7ba2254428.jpg');
-  height: 100px;
+  background-color: #DF744A;
+  height: 1.5em;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,8 +96,7 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse at center, rgba(191,216,210,0.55) 0%,
-  rgba(191,216,210,0.55) 100%);
+
   width: 100%;
   height: 3em;
   padding-top: 50px;
@@ -113,6 +162,12 @@ div.one p {
   align-items: center;
   width: 100%;
   color: #DF744A;
+  padding-top: 2.3em;
+  padding-bottom: 1.7em;
+  text-align: center;
+}
+.one {
+  padding: 1.5em;
 }
 
 .ikon img{
@@ -127,6 +182,9 @@ div.one p {
 }
 .osoba{
   text-align: justify;
+}
+.osoba-opis{
+    padding-top: 1.25em;
 }
 
 section {
@@ -194,7 +252,7 @@ form {
   width: 60%;
 }
 .sign-up {
-  background-color: #BFD8D2;
+
   padding: 32px;
 }
 input:focus {
@@ -228,7 +286,8 @@ label.css-label {
 }
 
 .funkcjonalnosci {
-  padding-top: 17px;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 #menu {
@@ -270,6 +329,30 @@ label.css-label {
 
 .navbar-default {
   background: white;
+}
+
+.game-handler-shown {
+  position: fixed;
+  width: 850px;
+  height: 650px;
+  top: 20%;
+  left: 27%;
+  background-color: pink;
+
+  z-index:99999;
+}
+
+.game-handler-hidden {
+  display:none;
+}
+
+.game-handler-center {
+  padding: 12.5px;
+}
+
+.game-handler-center2 {
+  float: left;
+  padding: 12.5px;
 }
 
 .cookies-message {
