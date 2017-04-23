@@ -296,6 +296,15 @@ label.css-label {
   padding: 12.5px;
 }
 
+.hide-game {
+  position: absolute;
+  top:0;
+  left:0;
+  background: url('assets/buttons/hideGame.png');
+  width: 25px;
+  height: 25px;
+}
+
 .cookies-message {
     padding: 10px 0;
     font-size: 14px;
