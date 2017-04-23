@@ -261,5 +261,8 @@ function startGameTimer() {
     gameTimer = setInterval(function() {
         timeLeftCounter.text = 'Time left: ' + seconds;
         seconds -= 1;
+        if (player.exists === false) {
+            clearInterval(gameTimer);
+        }
     }, 1000);
 }
