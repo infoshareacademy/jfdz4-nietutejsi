@@ -238,7 +238,7 @@ function startGameTimer() {
         } else if (seconds === 0) {
             levelOneLayout.dogXLayout = [224, 416, 608];
             levelOneLayout.dogYLayout = [224, 416];
-            game.state.start('lose');
+            game.state.start('win');
         }
     }, 1000);
 }
