@@ -11,30 +11,32 @@
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <script src="node_modules/wowjs/dist/wow.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             // Activate Carousel
             $("#myCarousel").carousel({interval: 3000});
 
             // Enable Carousel Indicators
-            $(".item1").click(function(){
+            $(".item1").click(function () {
                 $("#myCarousel").carousel(0);
             });
-            $(".item2").click(function(){
+            $(".item2").click(function () {
                 $("#myCarousel").carousel(1);
             });
-            $(".item3").click(function(){
+            $(".item3").click(function () {
                 $("#myCarousel").carousel(2);
             });
-            $(".item4").click(function(){
+            $(".item4").click(function () {
                 $("#myCarousel").carousel(3);
             });
 
             // Enable Carousel Controls
-            $(".left").click(function(){
+            $(".left").click(function () {
                 $("#myCarousel").carousel("prev");
             });
-            $(".right").click(function(){
+            $(".right").click(function () {
                 $("#myCarousel").carousel("next");
             });
         });
@@ -64,6 +66,7 @@
         </div>
     </nav>
 </div>
+
 <div class="fluid-container">
     <div id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -79,17 +82,18 @@
             <div class="item active">
                 <img src="photo/slider1.jpg" class="img-responsive">
                 <div class="zajawka col-xs-12">
-                <span>Pamiętaj o bliskich!</span>
+                    <span>Pamiętaj o bliskich!</span>
                 </div>
                 <div class="zajawka-btn">
-                    <a href="#zapis" class="btn btn-danger"><span class="glyphicon glyphicon-exclamation-sign"></span>  Zapisz się na PREMIERĘ!</a>
+                    <a href="#zapis" class="btn btn-danger"><span class="glyphicon glyphicon-envelope"></span>
+                        Zapisz się na PREMIERĘ!</a>
                 </div>
             </div>
 
             <div class="item">
                 <img src="photo/slider2.jpg" class="img-responsive">
                 <div class="zajawka">
-                    <span>Nigdy nie jest za późno na miłe słowo!</span>
+                    <span>Nigdy nie jest za późno, na miłe słowo!</span>
                 </div>
             </div>
 
@@ -103,7 +107,7 @@
             <div class="item">
                 <img src="photo/slider4.jpg" class="img-responsive">
                 <div class="zajawka">
-                    <span>...skożystaj z naszego generatora!</span>
+                    <span>...skorzystaj z naszego generatora!</span>
                 </div>
             </div>
         </div>
@@ -119,53 +123,52 @@
         </a>
     </div>
 </div>
-
-<div class="move-down" id="funkcj">
+<div id="facebook_slider_widget" style="display: none"><script type="text/javascript" src="http://webfrik.pl/widget/facebook_slider.html?fb_url=https://www.facebook.com/Wish-Book-295604610852437/&amp;fb_width=290&amp;fb_height=300&amp;fb_faces=true&amp;fb_stream=true&amp;fb_header=true&amp;fb_border=true&amp;fb_theme=light&amp;chx=787&amp;speed=FAST&amp;fb_pic=sign&amp;position=RIGHT"></script></div><div class="move-down" id="funkcj">
     <div class="container funkcjonalnosci">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 one">
 
-                    <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/facebook.svg" alt="facebook">
-                    <div class="media-body">
-                        <div class="caption podpis">
-                            <h3>Integracja z facebookiem</h3>
-                            <p>Zbierz dane o osobie z jego profilu na facebooku</p>
-                        </div>
+                <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/facebook.svg" alt="facebook">
+                <div class="media-body">
+                    <div class="caption podpis">
+                        <h3>Integracja z facebookiem</h3>
+                        <p>Zbierz dane o osobie z jego profilu na facebooku</p>
                     </div>
+                </div>
 
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 one">
 
-                    <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/mail.svg" alt="mail">
-                    <div class="media-body">
-                        <div class="caption podpis">
-                            <h3>Wyślij e-kartkę</h3>
-                            <p>W łatwy sposób sporządź kartkę z życzeniami i wyślij bezpośrednio do
-                                życzeniobiorcy!</p>
-                        </div>
+                <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/mail.svg" alt="mail">
+                <div class="media-body">
+                    <div class="caption podpis">
+                        <h3>Wyślij e-kartkę</h3>
+                        <p>W łatwy sposób sporządź kartkę z życzeniami i wyślij bezpośrednio do
+                            życzeniobiorcy!</p>
                     </div>
+                </div>
 
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 one">
 
-                    <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/pencil.svg" alt="facebook">
-                    <div class="media-body">
-                        <div class="caption podpis">
-                            <h3>Zaprojektuj kalendarz</h3>
-                            <p> Stwórz własny kalendarz z solenizantami i niech on on wszystkim pamięta!</p>
-                        </div>
+                <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/pencil.svg" alt="facebook">
+                <div class="media-body">
+                    <div class="caption podpis">
+                        <h3>Zaprojektuj kalendarz</h3>
+                        <p> Stwórz własny kalendarz z solenizantami i niech on on wszystkim pamięta!</p>
                     </div>
+                </div>
 
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 one">
 
-                    <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/print.svg" alt="mail">
-                    <div class="media-body">
-                        <div class="caption podpis">
-                            <h3>Wyrukuj kartkę z życzeniami</h3>
-                            <p>Daj komuś kartkę w realu!</p>
-                        </div>
+                <img class="img-responsive obraz" src="moj_w_bootstrapie/FZN4N-6/print.svg" alt="mail">
+                <div class="media-body">
+                    <div class="caption podpis">
+                        <h3>Wyrukuj kartkę z życzeniami</h3>
+                        <p>Daj komuś kartkę w realu!</p>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -178,18 +181,18 @@
             <h1>INFORMACJE O NAS</h1>
         </div>
     </div>
-    <div class="pop"></div>
     <div class="container">
         <div class="row border-top-dashed">
             <div class="osoba col-xs-12 col-sm-6 col-md-3">
                 <h2 class="imie">Marta</h2>
-                <img src="photo/marta.jpg"
+                <div class="wow rollIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: rollIn;">
+                <img id="myphoto" src="photo/marta.jpg"
                      class="img-responsive img-rounded"
-                     alt="Marta"/>
-                <p>Marta skończyła studia na Politechnice Gdańskiego, od niedawna jest koordynatorem w firmie
+                     alt="Marta"/></div>
+                <p class="osoba-opis">Marta skończyła studia na Politechnice Gdańskiego, od niedawna jest koordynatorem
+                    w firmie
                     wentylacyjno - klimatyzacyjnej. Programowanie jest dla niej nowością. która przeradza się powoli
-                    w
-                    pasję.</p>
+                    w pasję.</p>
                 <div class="ikon">
                     <a href="https://github.com/martaswiderska">
                         <img src="photo/git.jpg">
@@ -205,10 +208,12 @@
             </div>
             <div class="osoba col-xs-12 col-sm-6 col-md-3">
                 <h2 class="imie">Rafał</h2>
-                <img src="photo/rafal.jpg"
+                <div class="wow bounceInDown" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: bounceInDown;">
+                <img id="myphoto" src="photo/rafal.jpg"
                      class="img-responsive img-rounded"
-                     alt="Rafał"/>
-                <p>Rafał skończył studia na AGH. Aktualnie pracuje w rafinerii grupy LOTOS. Lubi biegać po lesie i
+                     alt="Rafał"/></div>
+                <p class="osoba-opis">Rafał skończył studia na AGH. Aktualnie pracuje w rafinerii grupy LOTOS. Lubi
+                    biegać po lesie i
                     szukać nowej cywilizacji. Programuje od niedawna, ale idzie mu coraz lepiej. Kocha naleśniki i
                     jest
                     szejkiem naftowym. </p>
@@ -227,11 +232,13 @@
             </div>
             <div class="osoba col-xs-12 col-sm-6 col-md-3">
                 <h2 class="imie">Agnieszka</h2>
-                <img src="photo/aga.jpg"
+                <div class="wow bounceInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: bounceInUp;">
+                <img id="myphoto" src="photo/aga.jpg"
                      class="img-responsive img-rounded"
-                     alt="Agnieszka"/>
-                <p>Agnieszka od lat pracuje z dziećmi i młodzieżą, a od niedawna próbuje sił w budowaniu stron -
-                    wyboista droga, ale dzięki kursowi na iSAcadamy idzie jej coraz lepiej. Zafascynowan fotorafią.
+                     alt="Agnieszka"/></div>
+                <p class="osoba-opis">Agnieszka pracuje z dziećmi i młodzieżą, od niedawna próbuje sił w budowaniu
+                    stron-
+                    wyboista droga, ale dzięki kursowi idzie jej coraz lepiej. Zafascynowan fotorafią.
                     Uważny obserwator otoczenia. </p>
                 <div class=" ikon">
                     <a href="https://github.com/infoshareacademy/jfdz4-nietutejsi">
@@ -248,13 +255,14 @@
             </div>
             <div class="osoba col-xs-12 col-sm-6 col-md-3">
                 <h2 class="imie">Artur</h2>
-                <img src="photo/artur.jpg"
+                <div class="wow lightSpeedIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: lightSpeedIn;">
+                <img id="myphoto" src="photo/artur.jpg"
                      class="img-responsive img-rounded"
-                     alt="Artur"/>
-                <p>Student filologii angielskiej na Uniwersytecie Gdańskim. Od zawsze chciał programować, jednak
-                    brakowało mu okazji by to zacząć - gdy się nadarzyła, nie mogł jej przepuścić i zapisał się na
-                    kurs
-                    front-endu w iSAcademy.</p>
+                     alt="Artur"/></div>
+                <p class="osoba-opis">Student filologii angielskiej na Uniwersytecie Gdańskim. Od zawsze chciał
+                    programować, jednak
+                    brakowało mu okazji by zacząć - gdy się nadarzyła, nie mogł jej przepuścić i zapisał się na
+                    kurs w iSAcademy.</p>
                 <div class=" ikon">
                     <a href="https://github.com/falbor45">
                         <img src="photo/git.jpg">

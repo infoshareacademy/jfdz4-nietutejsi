@@ -23,3 +23,5 @@ function checkTerms() {
 function enableSubmit() {
     document.signupForm.submitemail.disabled = false
 }
+
+new WOW().init();
