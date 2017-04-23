@@ -17,7 +17,7 @@ var loadState= {
         game.load.image('invisibleWall', 'assets/sprites/invisibleWall.png');
         game.load.image('beginGameButton', 'assets/buttons/beginGameButton.png');
         game.load.image('instructionButton', 'assets/buttons/instructionButton.png');
-        game.load.image('replayButton', 'assets/buttons/reaplyButton.png');
+        game.load.image('replayButton', 'assets/buttons/replayButton.png');
         game.load.audio('collectEnvelopeSound', 'assets/sounds/collectEnvelopeSound.mp3');
     },
 
