@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #BFD8D2;
+  background: #e3edea;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #DF744A;
@@ -78,12 +78,14 @@ main {
   text-decoration:none;
   color: #DF744A;
   text-align:center;
+
 }
 
 
 .obraz {
   max-width: 130px;
   margin: 0 auto;
+  color: #DF744A;
 }
 
 @media screen and (max-width:767px) {
@@ -91,7 +93,9 @@ main {
     padding-top: 4em;
   }
 }
-
+div.one p {
+  font-size: 15px;
+}
 .onas {
   width: 80%;
   margin: 0 auto;
@@ -100,6 +104,7 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 .inform{
@@ -112,12 +117,13 @@ main {
 
 .ikon img{
   max-width: 30px;
-  margin: 5px;
+  margin: 10px;
 }
 .ikon{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 25px
 }
 .osoba{
   text-align: justify;
@@ -288,4 +294,17 @@ label.css-label {
 .game-handler-center2 {
   float: left;
   padding: 12.5px;
+}
+
+.cookies-message {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid #D3D0D0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #EFEFEF;
+    width: 100%;
+    z-index: 999;
 }
