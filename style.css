@@ -273,6 +273,7 @@ label.css-label {
   top: 20%;
   left: 27%;
   background-color: pink;
+
   z-index:99999;
 }
 
@@ -280,3 +281,11 @@ label.css-label {
   display:none;
 }
 
+.game-handler-center {
+  padding: 12.5px;
+}
+
+.game-handler-center2 {
+  float: left;
+  padding: 12.5px;
+}
