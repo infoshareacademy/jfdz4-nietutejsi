@@ -22,12 +22,9 @@ img.myphoto:hover{
   opacity : 0.70;
   filter : alpha(opacity=70);
 }
-.zajawka.span{
-  font-size: 100px;
-}
 .zajawka{
+  top: 40%;
   position: absolute;
-  top: 30%;
   text-align: center;
   left: 0;
   right: 0;
@@ -37,7 +34,6 @@ img.myphoto:hover{
 .slider {
   position: relative;
 }
-
 h2{
   padding-bottom: 20px;
   padding-top: 20px;
@@ -47,7 +43,7 @@ h2{
 }
 .zajawka-btn {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -55,7 +51,7 @@ h2{
 }
 
 .zajawka span {
-  font-size: 2em;
+  font-size: 2.3em;
   color: #691812;
 }
 
@@ -64,6 +60,7 @@ body {
   font-size: 20px;
   color: #DF744A;
   height: 100%;
+  min-width: 200px;
 }
 
 .pop{
@@ -74,39 +71,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.side-header {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.side-foto {
-  /*background: url(koperty.png) no-repeat center #BFD8D2;*/
-  height: 950px;
-  display: flex;
-  align-items: stretch;
-  position: relative;
-}
-.side-title {
-  font-size: 3.750em;
-  text-align: center;
-  font-weight: bolder;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/*.side-header {*/
+  /*width: 100%;*/
+  /*text-align: center;*/
+  /*margin-top: 20px;*/
+  /*margin-bottom: 20px;*/
+/*}*/
+/*.side-foto {*/
+  /*height: 950px;*/
+  /*display: flex;*/
+  /*align-items: stretch;*/
+  /*position: relative;*/
+/*}*/
+/*.side-title {*/
+  /*font-size: 3.750em;*/
+  /*text-align: center;*/
+  /*font-weight: bolder;*/
+  /*position: absolute;*/
+  /*top: 30%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*width: 100%;*/
+  /*height: 3em;*/
+  /*padding-top: 50px;*/
+/*}*/
 
-  width: 100%;
-  height: 3em;
-  padding-top: 50px;
-}
-main {
-  height: 800px;
-  text-align: center;
-}
+/*.main {*/
+  /*height: 800px;*/
+  /*text-align: center;*/
+/*}*/
 .navbar-default {
   border: 0;
   margin-bottom: 0;
+  padding-bottom: 10px;
 }
 .navbar-brand {
   float:none;
@@ -126,31 +123,30 @@ main {
   text-decoration:none;
   color: #DF744A;
   text-align:center;
-
 }
-
-
 .obraz {
   max-width: 130px;
   margin: 0 auto;
   color: #DF744A;
 }
 
-.zajawka-btn {
-  top: 60%;
-}
-.zajawka {
-  top: 20%;
-}
-
-.zajawka span {
-  padding: 10px 15px;
-  font-size: 1.5em;
-}
-
 @media screen and (max-width:767px) {
   .one {
     padding-top: 4em;
+  }
+  .zajawka span {
+    font-size: 1.4em;
+  }
+  .zajawka-btn a {
+    font-size: 1.3em;
+  }
+  .zajawka-btn{
+    width: 70%;
+    height: 70%;
+  }
+  .navbar-brand > img{
+    width: 70%;
+    height: 70%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1001px) {
@@ -158,14 +154,20 @@ main {
    font-size: 14px;
     text-align: justify;
   }
+  .zajawka span {
+    font-size: 1.4em;
+  }
+  .zajawka-btn a {
+    font-size: 1.3em;
+  }
 }
 @media screen and (max-width: 1001px){
-  .zajawka span{
-    font-size: 20px;
-  }
-  .zajawka-btn a{
-    font-size: 1em;
-  }
+  /*.zajawka span{*/
+    /*font-size: 20px;*/
+  /*}*/
+  /*.zajawka-btn a{*/
+    /*font-size: 1em;*/
+  /*}*/
   .navbar-default .navbar-nav > li > a {
     text-align: center;
   }
@@ -173,22 +175,10 @@ main {
     width: 70%;
     height: 70%;
   }
-  /*.carousel-inner > .item > img, .carousel-inner > .item > a > img{*/
-    /*max-height: 200px;*/
+  /*.zajawka span {*/
+    /*padding: 10px 15px;*/
+    /*font-size: 1.5em;*/
   /*}*/
-
-  .zajawka {
-    top: 20%;
-  }
-
-  .zajawka span {
-    padding: 10px 15px;
-    font-size: 1.5em;
-  }
-
-  .zajawka-btn {
-    top: 60%;
-  }
 }
 
 

@@ -1,5 +1,6 @@
-$( document ).ready(function() {
+$(document ).ready(function() {
     new WOW().init();
+
     $('#sign-up-button').click(function () {
         var x = document.forms["signupForm"]["email"].value;
         var atpos = x.indexOf("@");
