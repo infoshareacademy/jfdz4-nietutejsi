@@ -30,18 +30,13 @@ $( document ).ready(function() {
         var dotpos = x.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
             alert("Nieprawidłowy adres e-mail");
-        } else if(document.signupForm.agreement.checked)
+        } else
         {
             $('.users-email').val('');
             $('#game-handler').removeClass('game-handler-hidden');
             $('#game-handler').addClass('game-handler-shown');
             $('.dimmer-shown').removeClass('dimmer-hidden');
             return false;
-        }
-        else
-        {
-            document.signupForm.submitemail.disabled=true;
-            alert("Brak wyrażenia zgody");
         }
     });
     $('.hide-game').click(function() {

@@ -448,3 +448,16 @@ label.css-label {
     width: 100%;
     z-index: 999;
 }
+
+.email-text {
+  margin-top: 2em;
+  font-size: 0.75em;
+}
+
+.mail-input {
+  width: 50%;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
