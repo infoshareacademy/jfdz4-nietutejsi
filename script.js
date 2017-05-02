@@ -1,9 +1,7 @@
 $( document ).ready(function() {
     new WOW().init();
-    // Activate Carousel
     $("#myCarousel").carousel({interval: 3000});
 
-    // Enable Carousel Indicators
     $(".item1").click(function () {
         $("#myCarousel").carousel(0);
     });
@@ -17,7 +15,6 @@ $( document ).ready(function() {
         $("#myCarousel").carousel(3);
     });
 
-    // Enable Carousel Controls
     $(".left").click(function () {
         $("#myCarousel").carousel("prev");
     });
@@ -30,6 +27,7 @@ $( document ).ready(function() {
         var dotpos = x.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
             alert("Nieprawidłowy adres e-mail");
+            // FIXME remove double check on click
         } else
         {
             $('#game-handler').removeClass('game-handler-hidden');
