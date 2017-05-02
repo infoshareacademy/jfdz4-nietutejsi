@@ -21,13 +21,14 @@ $( document ).ready(function() {
     $(".right").click(function () {
         $("#myCarousel").carousel("next");
     });
-    $('#sign-up-button').click(function () {
+    $('#sign-up-button').unbind('click').bind('click', function () {
         var x = document.forms["signupForm"]["email"].value;
         var atpos = x.indexOf("@");
         var dotpos = x.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
             alert("Nieprawidłowy adres e-mail");
-            // FIXME remove double check on click
+            $('.users-email').val('');
+            return false;
         } else
         {
             $('#game-handler').removeClass('game-handler-hidden');
