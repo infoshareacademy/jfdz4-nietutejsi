@@ -32,10 +32,12 @@ $( document ).ready(function() {
             alert("Nieprawidłowy adres e-mail");
         } else
         {
-            $('.users-email').val('');
             $('#game-handler').removeClass('game-handler-hidden');
             $('#game-handler').addClass('game-handler-shown');
             $('.dimmer-shown').removeClass('dimmer-hidden');
+            setTimeout(function() {
+                $('.users-email').val('');
+            }, 1);
             return false;
         }
     });
