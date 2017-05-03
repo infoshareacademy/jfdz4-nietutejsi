@@ -337,7 +337,7 @@ label.css-label {
 .game-handler-shown {
   position: fixed;
   width: 46%;
-  height: 60%;
+  height: 69%;
   top: 20%;
   left: 27%;
   background-color: #e3edea;
@@ -355,7 +355,15 @@ label.css-label {
 
 .game-handler-center2 {
   float: left;
-  padding: 6.25%;
+  padding: 2.154%;
+}
+
+.game-handler-current {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  top: 21%;
+  margin: 0 auto;
 }
 
 .hide-game {
