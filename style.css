@@ -349,20 +349,11 @@ label.css-label {
   display:none;
 }
 
-.game-handler-center {
-  padding: 2.55%;
-}
-
-.game-handler-center2 {
-  float: left;
-  padding: 2.154%;
-}
-
 .game-handler-current {
   width: 800px;
   height: 600px;
   position: relative;
-  top: 21%;
+  top: 6%;
   margin: 0 auto;
 }
 
