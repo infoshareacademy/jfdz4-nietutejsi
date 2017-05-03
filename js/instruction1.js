@@ -1,6 +1,3 @@
-/**
- * Created by anik on 2017-04-23.
- */
 var instructionState1 = {
 
     create: function () {
@@ -29,8 +26,8 @@ var instructionState1 = {
         });
         game.add.sprite(30, 280, 'dog'),
 
-        game.add.button(10, 500, 'jumpLeft', foo);
-        game.add.button(730, 500, 'jumpRight', foo1);
+        game.add.button(10, 500, 'jumpLeft', backInst);
+        game.add.button(730, 500, 'jumpRight', goInst2);
     },
 
 
@@ -42,9 +39,9 @@ var instructionState1 = {
     }
 };
 
-function foo() {
-    instructionState.backToMenu();
+function backInst() {
+    instructionState1.backToMenu();
 }
-function foo1() {
-    instructionState.moveToNextInstruction();
+function goInst2() {
+    instructionState1.moveToNextInstruction();
 }

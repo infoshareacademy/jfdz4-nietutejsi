@@ -1,6 +1,3 @@
-/**
- * Created by anik on 2017-04-23.
- */
 var instructionState3 = {
 
     create: function () {
@@ -12,14 +9,10 @@ var instructionState3 = {
             font: '20px Arial', fill: '#ffffff'
         });
 
-        game.add.button(0, 0, 'jumpLeft', foo);
+        game.add.button(0, 0, 'jumpLeft', backMenu);
     },
 
     backToMenu: function () {
         game.state.start('menu');
     }
 };
-
-function foo() {
-    game.state.start('menu');
-}

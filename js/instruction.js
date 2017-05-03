@@ -9,8 +9,8 @@ var instructionState = {
           font: '30px Arial', fill: '#ffffff'
       });
 
-      game.add.button(10, 500, 'jumpLeft', foo);
-      game.add.button(730, 500, 'jumpRight', foo1);
+      game.add.button(10, 500, 'jumpLeft', backMenu);
+      game.add.button(730, 500, 'jumpRight', goInst1);
   },
 
   backToMenu: function () {
@@ -21,9 +21,9 @@ var instructionState = {
   }
 };
 
-function foo() {
+function backMenu() {
   instructionState.backToMenu();
 }
-function foo1() {
+function goInst1() {
     instructionState.moveToNextInstruction();
 }
