@@ -412,3 +412,33 @@ label.css-label {
 ::-webkit-input-placeholder {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  #sign-up-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+    width: 55%;
+    font-size: 1em;
+    border-radius: 15px 15px 15px 15px;
+    border: 1px solid black;
+    padding: 2% 3%;
+    cursor: pointer;
+    background-color: #DF744A ;
+    border-left: 1px solid black;
+    transition: all 1s;
+  }
+  .sign-up-wrapper {
+    display: inherit;
+  }
+  .users-email {
+    margin: 0 auto;
+    display: block;
+    padding: 2% 5%;
+    border-radius: 15px 15px 15px 15px;
+    border: 1px solid black;
+    font-size: 1em;
+    width: 55%;
+    text-align: center;
+  }
+}
