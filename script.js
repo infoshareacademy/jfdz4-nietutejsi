@@ -31,9 +31,10 @@ $( document ).ready(function() {
             return false;
         } else
         {
-            $('#game-handler').removeClass('game-handler-hidden');
+            $('#gameDiv').removeClass('hidden');
+            $('#game-handler').removeClass('hidden');
             $('#game-handler').addClass('game-handler-shown');
-            $('.dimmer-shown').removeClass('dimmer-hidden');
+            $('.dimmer-shown').removeClass('hidden');
             setTimeout(function() {
                 $('.users-email').val('');
             }, 1);
@@ -41,16 +42,17 @@ $( document ).ready(function() {
         }
     });
     $('.hide-game').click(function() {
+        $('#gameDiv').addClass('hidden');
         $('#game-handler').removeClass('game-handler-shown');
-        $('#game-handler').addClass('game-handler-hidden');
-        $('.show-game-shown').removeClass('show-game-hidden');
-        $('.dimmer-shown').addClass('dimmer-hidden');
+        $('#game-handler').addClass('hidden');
+        $('.show-game-shown').removeClass('hidden');
+        $('.dimmer-shown').addClass('hidden');
     });
     $('.show-game-shown').click(function() {
-        $('#game-handler').removeClass('game-handler-hidden');
+        $('#game-handler').removeClass('hidden');
         $('#game-handler').addClass('game-handler-shown');
-        $('.show-game-shown').addClass('show-game-hidden');
-        $('.dimmer-shown').removeClass('dimmer-hidden');
+        $('.show-game-shown').addClass('hidden');
+        $('.dimmer-shown').removeClass('hidden');
     });
     $(window).on("scroll", function() {
 
