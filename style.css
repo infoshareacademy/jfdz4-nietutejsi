@@ -1,4 +1,6 @@
 * {
+  /*font-family: 'Pangolin', cursive;*/
+  /*font-family: 'Raleway', sans-serif;*/
   font-family: 'Titillium Web', sans-serif;
 }
 body {
@@ -113,9 +115,8 @@ body {
     width: 70%;
     height: 70%;
   }
-  .navbar-brand > img{
-    width: 70%;
-    height: 70%;
+  .navbar-nav{
+    border-bottom: 1px solid #dedede;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1001px) {
@@ -135,9 +136,10 @@ body {
     text-align: center;
   }
   .navbar-brand > img{
-    width: 70%;
-    height: 70%;
+    width: 105px;
+    margin-left: 20px;
   }
+
 }
 
 
@@ -179,12 +181,43 @@ div.one p {
   justify-content: center;
   margin: 25px
 }
+.osoba:hover > .osoba-img {
+  transform: rotateY(190deg);
+  -webkit-transform: rotateY(190deg);
+}
+.osoba-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 2s;
+  -webkit-transition: 2s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
 .osoba{
   text-align: center;
   position: relative;
 }
 .osoba-opis{
-    padding-top: 1.25em;
+    padding-top: 15em;
+}
+.front-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.back-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .myphoto{
   display: flex;
@@ -345,46 +378,17 @@ label.css-label {
   z-index:99999;
 }
 
-
-.game-handler-current {
-  position: fixed;
-  top: 24%;
-  left: 29%;
-  z-index: 999999;
+.game-handler-hidden {
+  display:none;
 }
 
-.hide-game {
-  position: absolute;
-  top:0;
-  left:0;
-  background: url('assets/buttons/hideGame.png');
-  width: 25px;
-  height: 25px;
+.game-handler-center {
+  padding: 12.5px;
 }
 
-.show-game-shown {
-  position: fixed;
-  top: 97.5%;
-  left: 0;
-  height: 25px;
-  padding: 2px;
-  background-color: #e3edea;
-}
-
-
-.dimmer-shown {
-  background:#000;
-  opacity:0.5;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:9999;
-}
-
-.hidden {
-  display: none;
+.game-handler-center2 {
+  float: left;
+  padding: 12.5px;
 }
 
 .cookies-message {
