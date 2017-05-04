@@ -345,16 +345,12 @@ label.css-label {
   z-index:99999;
 }
 
-.game-handler-hidden {
-  display:none;
-}
 
 .game-handler-current {
-  width: 800px;
-  height: 600px;
-  position: relative;
-  top: 6%;
-  margin: 0 auto;
+  position: fixed;
+  top: 24%;
+  left: 29%;
+  z-index: 999999;
 }
 
 .hide-game {
@@ -375,9 +371,6 @@ label.css-label {
   background-color: #e3edea;
 }
 
-.show-game-hidden {
-  display: none;
-}
 
 .dimmer-shown {
   background:#000;
@@ -390,7 +383,7 @@ label.css-label {
   z-index:9999;
 }
 
-.dimmer-hidden {
+.hidden {
   display: none;
 }
 
