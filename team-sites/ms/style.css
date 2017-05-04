@@ -5,6 +5,14 @@
     font-family: 'Play', sans-serif;
 }
 
+h1 {
+	margin: 25px 0px; 
+}
+
+h4 {
+	font-size: 20px;
+}
+
 .parallax {
     background-image: url("IMG/4.jpg");
 
@@ -42,18 +50,17 @@
 }
 .pop{
     background-image: url("IMG/4.jpg");
-    min-height: 20px;
-    max-height: 20px;
+    height: 30px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.pageFooter img{
+.social-img{
     min-width: 30px;
     max-width: 50px;
     float: left;
-    margin: 5px;
+    margin: 20px 5px 5px 5px;
 }
 
 .name{
@@ -61,10 +68,89 @@
 }
 .allcontact{
     font-family: 'Play', sans-serif;
+	margin-bottom: 35px;
 }
 .nav .navbar-default{
     background: rgba(255,255,255,0.5);
 }
 p{
     text-align: justify;
+}
+
+.form-submit-btn {
+	margin-top: 15px;
+	padding: 6px 15px;
+	font-size: 16px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-weight: bold;
+	font-size: 22.5px;
+}
+
+.photo img {
+		width: 97.5%;
+		margin-bottom: 25px;
+}
+	
+.contact label {
+		font-size: 16px;
+}
+	
+.contact2 p {
+	font-size: 16px;
+}
+
+@media(max-width:1199px) { 
+	.contact2 h4, .contact2 p {
+		text-align: center;
+	}
+	
+	.contact2 h4 {
+		font-size: 22.5px;
+	}
+	
+	.contact2 p {
+		font-size: 20px;
+	}
+	
+	.social-box  {
+		 display: flex;
+		justify-content: center;
+	}
+}	
+
+@media(max-width:767px) { 
+.navbar-default .navbar-nav > li > a {
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	.photo {
+		text-align: center;
+	}
+	
+	.photo img {
+		width: 80%;
+	}
+	
+	.text p {
+		margin-bottom: 25px;
+	}
+	
+}
+
+@media(max-width:515px) { 
+	.title h1 {
+		text-align: center;
+		font-size: 2.25em;
+	}
+	
+	.contact2 h4 {
+		font-size: 18px;
+	}
+	
+	.contact2 p {
+		font-size: 16px;
+	}
 }

@@ -1,4 +1,6 @@
 * {
+  /*font-family: 'Pangolin', cursive;*/
+  /*font-family: 'Raleway', sans-serif;*/
   font-family: 'Titillium Web', sans-serif;
 }
 body {
@@ -113,9 +115,8 @@ body {
     width: 70%;
     height: 70%;
   }
-  .navbar-brand > img{
-    width: 70%;
-    height: 70%;
+  .navbar-nav{
+    border-bottom: 1px solid #dedede;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1001px) {
@@ -135,9 +136,10 @@ body {
     text-align: center;
   }
   .navbar-brand > img{
-    width: 70%;
-    height: 70%;
+    width: 105px;
+    margin-left: 20px;
   }
+
 }
 
 
