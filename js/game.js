@@ -1,4 +1,9 @@
-var game = new Phaser.Game((window.innerWidth * 0.416666666667), ((window.innerWidth * 0.416666666667) * 0.75), Phaser.AUTO, 'gameDiv');
+var gameWidth = Math.round((window.innerWidth * 0.416666666667));
+var gameWidthScale = gameWidth / 800;
+var gameHeight = Math.round(((window.innerWidth * 0.416666666667) * 0.75));
+var gameHeightScale = gameHeight / 600;
+
+var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'gameDiv');
 
 game.state.add('boot', bootState);
 game.state.add('load', loadState);

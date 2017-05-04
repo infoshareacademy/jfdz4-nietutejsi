@@ -2,8 +2,9 @@ var loadState= {
     
     preload: function() {
         
-        var loadingLabel = game.add.text(80, 150, 'Ładowanie...',
+        var loadingLabel = game.add.text((gameWidth * 0.1), (gameHeight * 0.25), 'Ładowanie...',
           {font: '30px Courier', fill: '#ffffff'});
+        loadingLabel.scale.setTo(gameWidthScale, gameHeightScale);
         
         game.load.image('envelope', 'assets/sprites/envelope.png');
         game.load.spritesheet('dog', 'assets/sprites/dogsprite.png', 32, 32);
