@@ -107,6 +107,7 @@ var playState = {
         
         createRandomReceivent();
 
+        game.world.bringToTop(player);
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
         scoreCounter.scale.setTo(gameWidthScale, gameHeightScale);
         envelopeNumberCounter = game.add.text(0, Math.round(gameHeight * 0.04166666666), "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
@@ -171,7 +172,6 @@ var playState = {
                 createEnvelope();
                 envelopeSound.play();
                 game.world.bringToTop(player);
-                game.world.bringToTop(randomReceivent);
                 scoreValue += 10 * scoreMultiplier;
                 envelopeValue += 1;
                 scoreCounter.text = 'Score: ' + scoreValue.toFixed(0);
@@ -267,30 +267,25 @@ function createRandomReceivent() {
         randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(Math.round(gameWidth * 0.02875), Math.round(gameHeight * 0.02833333333), 0, Math.round(gameHeight * 0.04333333333));
     } else if (randomRecRandomizer === 1) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'nutcracker');
         randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(Math.round(gameWidth * 0.02875), Math.round(gameHeight * 0.02833333333), 0, Math.round(gameHeight * 0.04333333333));
     } else if (randomRecRandomizer === 2) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'tracker');
         randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(Math.round(gameWidth * 0.02875), Math.round(gameHeight * 0.02833333333), 0, Math.round(gameHeight * 0.04333333333));
     } else if (randomRecRandomizer === 3) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'warrior');
         randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(Math.round(gameWidth * 0.02875), Math.round(gameHeight * 0.02833333333), 0, Math.round(gameHeight * 0.04333333333));
     } else if (randomRecRandomizer === 4) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'youngWoman');
         randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(Math.round(gameWidth * 0.02875), Math.round(gameHeight * 0.02833333333), 0, Math.round(gameHeight * 0.04333333333));
     }
 }
