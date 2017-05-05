@@ -166,6 +166,13 @@ var playState = {
             if (player.exists === false) {
                 levelOneLayout.dogXLayout = [Math.round(gameWidth * 0.28), Math.round(gameWidth * 0.52), Math.round(gameWidth * 0.76)];
                 levelOneLayout.dogYLayout = [Math.round(gameHeight * 0.37333333333), Math.round(gameHeight * 0.69333333333)];
+                scoreValue = 0;
+                envelopeValue = 0;
+                scoreMultiplier = 1;
+                envelopeBurden = 1;
+                seconds = 60;
+                scoreBonus = 0;
+                noRep = 0;
                 game.state.start('lose');
             }
             if (envelope.exists === false) {
@@ -208,7 +215,7 @@ var levelOneLayout = {
     playerXLayout: [Math.round(gameWidth * 0.16), Math.round(gameWidth * 0.88)],
     playerYLayout: [Math.round(gameHeight * 0.21333333333), Math.round(gameHeight * 0.85333333333)],
     envelopeXLayout: [Math.round(gameHeight * 0.53333333333), Math.round(gameHeight * 0.85333333333)],
-    envelopeYLayout: [Math.round(gameWidth * 0.1), Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.3), Math.round(gameWidth * 0.4), Math.round(gameWidth * 0.5)],
+    envelopeYLayout: [Math.round(gameWidth * 0.1), Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.3), Math.round(gameWidth * 0.5)],
     randomRecXLayout: [Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.8)],
     randomRecYLayout: [Math.round(gameHeight * 0.21333333333), Math.round(gameHeight * 0.85333333333)]
 };
