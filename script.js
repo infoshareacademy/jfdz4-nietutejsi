@@ -50,6 +50,7 @@ $( document ).ready(function() {
     });
     $('.show-game-shown').click(function() {
         $('#game-handler').removeClass('hidden');
+        $('#gameDiv').removeClass('hidden');
         $('#game-handler').addClass('game-handler-shown');
         $('.show-game-shown').addClass('hidden');
         $('.dimmer-shown').removeClass('hidden');
