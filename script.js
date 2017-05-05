@@ -31,7 +31,6 @@ $( document ).ready(function() {
             return false;
         } else
         {
-            $('#gameDiv').removeClass('hidden');
             $('#game-handler').removeClass('hidden');
             $('#game-handler').addClass('game-handler-shown');
             $('.dimmer-shown').removeClass('hidden');
@@ -40,6 +39,9 @@ $( document ).ready(function() {
             }, 1);
             return false;
         }
+    });
+    $('#gameLauncher').click(function () {
+        $('#gameDiv').removeClass('hidden');
     });
     $('.hide-game').click(function() {
         $('#gameDiv').addClass('hidden');
