@@ -555,4 +555,14 @@ label.css-label {
         width: 55%;
         text-align: center;
     }
+
+    .game-handler-shown>h2 {
+        margin-top: 3.750em;
+        font-size: 1em;
+    }
+
+    .game-handler-shown>p {
+        text-align: center;
+        font-size: 0.75em;
+    }
 }
