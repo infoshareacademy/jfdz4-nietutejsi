@@ -42,6 +42,9 @@ $( document ).ready(function() {
     });
     $('#gameLauncher').click(function () {
         $('#gameDiv').removeClass('hidden');
+        $('#game-handler-h2').hide();
+        $('#game-handler-p').hide();
+        $('#gameLauncher').hide();
     });
     $('.hide-game').click(function() {
         $('#gameDiv').addClass('hidden');

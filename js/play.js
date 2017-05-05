@@ -123,19 +123,19 @@ var playState = {
         game.physics.arcade.overlap(player, envelope, collectEnvelope, null, this);
         player.body.velocity.set(0);
         if (cursors.left.isDown) {
-            player.body.velocity.x = -150 * envelopeBurden;
+            player.body.velocity.x = -150 * envelopeBurden * gameWidthScale;
             player.play('left');
         }
         else if (cursors.right.isDown) {
-            player.body.velocity.x = 150 * envelopeBurden;
+            player.body.velocity.x = 150 * envelopeBurden * gameWidthScale;
             player.play('right');
         }
         else if (cursors.up.isDown) {
-            player.body.velocity.y = -150 * envelopeBurden;
+            player.body.velocity.y = -150 * envelopeBurden * gameWidthScale;
             player.play('up');
         }
         else if (cursors.down.isDown) {
-            player.body.velocity.y = 150 * envelopeBurden;
+            player.body.velocity.y = 150 * envelopeBurden * gameWidthScale;
             player.play('down');
         } else {
             player.animations.stop();

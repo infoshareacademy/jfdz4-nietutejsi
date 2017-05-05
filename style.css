@@ -435,14 +435,19 @@ label.css-label {
 
 .game-handler-shown>h2 {
     margin-top: 3.750em;
+    font-size: 1.5em;
 }
+
 .game-handler-shown>p {
     text-align: center;
+    font-size: 1em;
 }
 .game-handler-shown>img {
     display: block;
     margin: 0 auto;
     margin-top: 3em;
+    width: 25%;
+    height: auto;
 }
 
 .game-handler-hidden {
