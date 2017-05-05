@@ -46,7 +46,9 @@ var instructionState1 = {
         dogSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
         instButton = game.add.button((gameWidth * 0.0125), (gameHeight * 0.83333333333), 'jumpLeft', backInst);
+        instButton.scale.setTo(gameWidthScale, gameHeightScale);
         inst2Button = game.add.button((gameWidth * 0.9125), (gameHeight * 0.83333333333), 'jumpRight', goInst2);
+        inst2Button.scale.setTo(gameWidthScale, gameHeightScale);
     },
 
 
