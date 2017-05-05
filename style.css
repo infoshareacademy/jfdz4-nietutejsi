@@ -433,6 +433,18 @@ label.css-label {
     z-index: 99999;
 }
 
+.game-handler-shown>h2 {
+    margin-top: 3.750em;
+}
+.game-handler-shown>p {
+    text-align: center;
+}
+.game-handler-shown>img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
 .game-handler-hidden {
     display: none;
 }
