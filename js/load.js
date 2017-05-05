@@ -2,8 +2,9 @@ var loadState= {
     
     preload: function() {
         
-        var loadingLabel = game.add.text(80, 150, 'Ładowanie...',
+        var loadingLabel = game.add.text((gameWidth * 0.1), (gameHeight * 0.25), 'Ładowanie...',
           {font: '30px Courier', fill: '#ffffff'});
+        loadingLabel.scale.setTo(gameWidthScale, gameHeightScale);
         
         game.load.image('envelope', 'assets/sprites/envelope.png');
         game.load.spritesheet('dog', 'assets/sprites/dogsprite.png', 32, 32);
@@ -18,6 +19,8 @@ var loadState= {
         game.load.image('beginGameButton', 'assets/buttons/beginGameButton.png');
         game.load.image('instructionButton', 'assets/buttons/instructionButton.png');
         game.load.image('replayButton', 'assets/buttons/replayButton.png');
+        game.load.image('jumpLeft', 'assets/buttons/jumpLeft.png');
+        game.load.image('jumpRight', 'assets/buttons/jumpRight.png');
         game.load.audio('collectEnvelopeSound', 'assets/sounds/collectEnvelopeSound.mp3');
     },
 
