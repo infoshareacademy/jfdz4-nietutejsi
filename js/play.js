@@ -16,10 +16,10 @@ var playState = {
 
             var dogDirectionRandomizer = Math.ceil(Math.random() * 2);
             if (dogDirectionRandomizer === 1) {
-                dog.body.velocity.x = 100;
+                dog.body.velocity.x = 150 * gameWidthScale;
                 dog.play('right');
             } else {
-                dog.body.velocity.y = 100;
+                dog.body.velocity.y = 150 * gameWidthScale;
                 dog.play('down');
             }
 
@@ -122,19 +122,19 @@ var playState = {
         game.physics.arcade.overlap(player, envelope, collectEnvelope, null, this);
         player.body.velocity.set(0);
         if (cursors.left.isDown) {
-            player.body.velocity.x = -100 * envelopeBurden;
+            player.body.velocity.x = -150 * envelopeBurden;
             player.play('left');
         }
         else if (cursors.right.isDown) {
-            player.body.velocity.x = 100 * envelopeBurden;
+            player.body.velocity.x = 150 * envelopeBurden;
             player.play('right');
         }
         else if (cursors.up.isDown) {
-            player.body.velocity.y = -100 * envelopeBurden;
+            player.body.velocity.y = -150 * envelopeBurden;
             player.play('up');
         }
         else if (cursors.down.isDown) {
-            player.body.velocity.y = 100 * envelopeBurden;
+            player.body.velocity.y = 150 * envelopeBurden;
             player.play('down');
         } else {
             player.animations.stop();
@@ -143,18 +143,18 @@ var playState = {
         group.forEach(function (dog){
             game.physics.arcade.overlap(player, dog, killPlayer, null, this);
             if (dog.x === (gameWidth * 0.948)) {
-                dog.body.velocity.x = -100;
+                dog.body.velocity.x = -150 * gameWidthScale;
                 dog.play('left');
             } else if (dog.x === 0) {
-                dog.body.velocity.x = 100;
+                dog.body.velocity.x = 150 * gameWidthScale;
                 dog.play('right');
             }
             else if (dog.y > parseFloat((gameHeight * 0.920666666667).toFixed(1))) {
-                dog.body.velocity.y = -100;
+                dog.body.velocity.y = -150 * gameWidthScale;
                 dog.play('up');
             }
             else if (dog.y === 0) {
-                dog.body.velocity.y = 100;
+                dog.body.velocity.y = 150 * gameWidthScale;
                 dog.play('down');
             }
         });
