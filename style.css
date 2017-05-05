@@ -389,6 +389,35 @@ label.css-label {
   left: 29%;
 }
 
+.hide-game {
+  position: absolute;
+  top:0;
+  left:0;
+  background: url('assets/buttons/hideGame.png');
+  width: 25px;
+  height: 25px;
+}
+
+.show-game-shown {
+  position: fixed;
+  top: 97.5%;
+  left: 0;
+  height: 25px;
+  padding: 2px;
+  background-color: #e3edea;
+}
+
+.dimmer-shown {
+  background:#000;
+  opacity:0.5;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:9999;
+}
+
 .game-handler-center {
   padding: 12.5px;
 }
