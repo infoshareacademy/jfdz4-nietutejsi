@@ -181,7 +181,7 @@ var playState = {
                 animationSpeedUp += 1;
                 noRep += 1;
                 if (noRep === 1) {
-                    levelOneLayout.envelopeYLayout = [Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.4), Math.round(gameWidth * 0.6)];
+                    levelOneLayout.envelopeYLayout = [Math.round(gameWidth * 0.1), Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.3), Math.round(gameWidth * 0.4), Math.round(gameWidth * 0.5)];
                     levelOneLayout.envelopeXLayout = [Math.round(gameHeight * 0.53333333333), Math.round(gameHeight * 0.85333333333)];
                     noRep = 0;
                 }
@@ -208,7 +208,7 @@ var levelOneLayout = {
     playerXLayout: [Math.round(gameWidth * 0.16), Math.round(gameWidth * 0.88)],
     playerYLayout: [Math.round(gameHeight * 0.21333333333), Math.round(gameHeight * 0.85333333333)],
     envelopeXLayout: [Math.round(gameHeight * 0.53333333333), Math.round(gameHeight * 0.85333333333)],
-    envelopeYLayout: [Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.4), Math.round(gameWidth * 0.6)],
+    envelopeYLayout: [Math.round(gameWidth * 0.1), Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.3), Math.round(gameWidth * 0.4), Math.round(gameWidth * 0.5)],
     randomRecXLayout: [Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.8)],
     randomRecYLayout: [Math.round(gameHeight * 0.21333333333), Math.round(gameHeight * 0.85333333333)]
 };
@@ -231,6 +231,10 @@ function createEnvelope() {
     envelope = game.add.sprite(getAndRemoveFromArray(levelOneLayout.envelopeXLayout), getAndRemoveFromArray(levelOneLayout.envelopeYLayout), 'envelope');
     envelope.scale.setTo((gameWidthScale * 0.6), (gameHeightScale * 0.6));
     game.physics.arcade.enable(envelope);
+    envelope.bringToTop();
+    group2.forEach(function (dog) {
+        dog.bringToTop();
+    });
 }
 
 function giveInEnvelopes() {
@@ -242,6 +246,7 @@ function giveInEnvelopes() {
         scoreBonus = 0;
         randomReceivent.kill();
         createRandomReceivent();
+        game.world.bringToTop(player);
     }
 }
 
