@@ -383,6 +383,13 @@ label.css-label {
   display:none;
 }
 
+.game-handler-current {
+  position: fixed;
+  z-index: 99999999;
+  top: 24%;
+  left: 29%;
+}
+
 .game-handler-center {
   padding: 12.5px;
 }
