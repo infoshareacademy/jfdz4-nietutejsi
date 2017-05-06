@@ -7,42 +7,42 @@ var instructionState1 = {
         });
         charactersText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        playerText = game.add.text((gameWidth * 0.1), (gameHeight * 0.16666666666), 'LISTONOSZ - główny bohater. W ciągu 60 sekund powinien zebrać pojawiające się ' +
-            'losowo\n koperty i dostarczyć do odbiorcy. Z każdą zebraną kopertą zdobywa więcej punktów\n i wolniej pporusza się,' +
-            'dopóki nie odda kopert do odbiorcy. Musi uważać na psy.', {
-            font: '16px Arial', fill: '#ffffff'
+        playerText = game.add.text((gameWidth * 0.1), (gameHeight * 0.2), 'LISTONOSZ - główny bohater. W ciągu 60 sekund powinien zebrać pojawiające się\n ' +
+            'losowo koperty i dostarczyć do odbiorcy. Z każdą zebraną kopertą zdobywa więcej\n punktów i wolniej porusza się,' +
+            'póki nie odda kopert do odbiorcy. Musi uważać na psy.', {
+            font: '18px Arial', fill: '#ffffff'
         });
         playerText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        playerSprite = game.add.sprite((gameWidth * 0.0375), (gameHeight * 0.16666666666), 'player');
+        playerSprite = game.add.sprite((gameWidth * 0.0375), (gameHeight * 0.2), 'player');
         playerSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        randomReceiverText = game.add.text((gameWidth * 0.0375), (gameHeight * 0.33333333333), 'ODBIORCA KOPERT - pojawia się w losowym miejscu. Czeka,\n aż listonosz przekaże mu koperty.', {
-            font: '16px Arial', fill: '#ffffff'
+        randomReceiverText = game.add.text((gameWidth * 0.0375), (gameHeight * 0.45), 'ODBIORCA KOPERT - pojawia się w losowym miejscu.\n Czeka, aż listonosz przekaże mu koperty.', {
+            font: '18px Arial', fill: '#ffffff'
         });
         randomReceiverText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        darkmanSprite = game.add.sprite((gameWidth * 0.625), (gameHeight * 0.33333333333), 'darkman');
+        darkmanSprite = game.add.sprite((gameWidth * 0.625), (gameHeight * 0.45), 'darkman');
         darkmanSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        nutcrackerSprite = game.add.sprite((gameWidth * 0.6875), (gameHeight * 0.33333333333), 'nutcracker');
+        nutcrackerSprite = game.add.sprite((gameWidth * 0.6875), (gameHeight * 0.45), 'nutcracker');
         nutcrackerSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        trackerSprite = game.add.sprite((gameWidth * 0.75), (gameHeight * 0.33333333333), 'tracker');
+        trackerSprite = game.add.sprite((gameWidth * 0.75), (gameHeight * 0.45), 'tracker');
         trackerSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        warriorSprite = game.add.sprite((gameWidth * 0.8125), (gameHeight * 0.33333333333), 'warrior');
+        warriorSprite = game.add.sprite((gameWidth * 0.8125), (gameHeight * 0.45), 'warrior');
         warriorSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        youngWomanSprite = game.add.sprite((gameWidth * 0.875), (gameHeight * 0.33333333333), 'youngWoman');
+        youngWomanSprite = game.add.sprite((gameWidth * 0.875), (gameHeight * 0.45), 'youngWoman');
         youngWomanSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        dogText = game.add.text((gameWidth * 0.1), (gameHeight * 0.46666666666), 'PIES - przeszkadza listonoszowi w dostarczeniu listów do odbiorcy.', {
-            font: '16px Arial', fill: '#ffffff'
+        dogText = game.add.text((gameWidth * 0.1), (gameHeight * 0.65), 'PIES - przeszkadza listonoszowi w dostarczeniu listów do odbiorcy.', {
+            font: '18px Arial', fill: '#ffffff'
         });
         dogText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        dogSprite = game.add.sprite((gameWidth * 0.0375), (gameHeight * 0.46666666666), 'dog');
+        dogSprite = game.add.sprite((gameWidth * 0.0375), (gameHeight * 0.65), 'dog');
         dogSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
         instButton = game.add.button((gameWidth * 0.0125), (gameHeight * 0.83333333333), 'jumpLeft', backInst);
