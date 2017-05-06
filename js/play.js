@@ -184,7 +184,7 @@ var playState = {
                 scoreCounter.text = 'Score: ' + scoreValue.toFixed(0);
                 scoreMultiplier += 0.2;
                 envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
-                envelopeBurden -= 0.05;
+                envelopeBurden -= 0.1;
                 animationSpeedUp += 1;
                 noRep += 1;
                 if (noRep === 1) {
