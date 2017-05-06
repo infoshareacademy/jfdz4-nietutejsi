@@ -31,7 +31,6 @@ $( document ).ready(function() {
             return false;
         } else
         {
-            $('#gameDiv').removeClass('hidden');
             $('#game-handler').removeClass('hidden');
             $('#game-handler').addClass('game-handler-shown');
             $('.dimmer-shown').removeClass('hidden');
@@ -40,6 +39,12 @@ $( document ).ready(function() {
             }, 1);
             return false;
         }
+    });
+    $('#gameLauncher').click(function () {
+        $('#gameDiv').removeClass('hidden');
+        $('#game-handler-h2').hide();
+        $('#game-handler-p').hide();
+        $('#gameLauncher').hide();
     });
     $('.hide-game').click(function() {
         $('#gameDiv').addClass('hidden');
@@ -50,6 +55,7 @@ $( document ).ready(function() {
     });
     $('.show-game-shown').click(function() {
         $('#game-handler').removeClass('hidden');
+        $('#gameDiv').removeClass('hidden');
         $('#game-handler').addClass('game-handler-shown');
         $('.show-game-shown').addClass('hidden');
         $('.dimmer-shown').removeClass('hidden');

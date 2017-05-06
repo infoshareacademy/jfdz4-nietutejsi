@@ -2,40 +2,57 @@ var instructionState1 = {
 
     create: function () {
 
-        game.add.text(280, 30, 'POSTACIE', {
+        charactersText = game.add.text((gameWidth * 0.4125), (gameHeight * 0.05), 'POSTACIE', {
             font: '30px Arial', fill: '#ffffff'
         });
-        game.add.text(80, 100, 'LISTONOSZ - główny bohater. W ciągu 60 sekund powinien zebrać pojawiające się ' +
-            '\n losowo koperty i dostarczyć do odbiorcy. Z każdą zebraną kopertą zdobywa więcej\n punktów i wolniej pporusza się,' +
-            'dopóki nie odda kopert do odbiorcy. Musi uważać na\n psy.', {
+        charactersText.scale.setTo(gameWidthScale, gameHeightScale);
+
+        playerText = game.add.text((gameWidth * 0.1), (gameHeight * 0.16666666666), 'LISTONOSZ - główny bohater. W ciągu 60 sekund powinien zebrać pojawiające się ' +
+            'losowo\n koperty i dostarczyć do odbiorcy. Z każdą zebraną kopertą zdobywa więcej punktów\n i wolniej pporusza się,' +
+            'dopóki nie odda kopert do odbiorcy. Musi uważać na psy.', {
             font: '16px Arial', fill: '#ffffff'
         });
-        game.add.sprite(30, 100, 'player');
+        playerText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        game.add.text(30, 250, 'ODBIORCA KOPERT - pojawia się w losowym miejscu.\n Czeka, aż listonosz przekaże mu koperty.', {
+        playerSprite = game.add.sprite((gameWidth * 0.0375), (gameHeight * 0.16666666666), 'player');
+        playerSprite.scale.setTo(gameWidthScale, gameHeightScale);
+
+        randomReceiverText = game.add.text((gameWidth * 0.0375), (gameHeight * 0.33333333333), 'ODBIORCA KOPERT - pojawia się w losowym miejscu. Czeka,\n aż listonosz przekaże mu koperty.', {
             font: '16px Arial', fill: '#ffffff'
         });
-        game.add.sprite(450, 250, 'darkman');
-        game.add.sprite(500, 250, 'nutcracker');
-        game.add.sprite(550, 250, 'tracker');
-        game.add.sprite(600, 250, 'warrior');
-        game.add.sprite(650, 250, 'youngWoman');
+        randomReceiverText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        game.add.text(80, 350, 'PIES - przeszkadza listonoszowi w dostarczeniu listów do odbiorcy.', {
+        darkmanSprite = game.add.sprite((gameWidth * 0.625), (gameHeight * 0.33333333333), 'darkman');
+        darkmanSprite.scale.setTo(gameWidthScale, gameHeightScale);
+
+        nutcrackerSprite = game.add.sprite((gameWidth * 0.6875), (gameHeight * 0.33333333333), 'nutcracker');
+        nutcrackerSprite.scale.setTo(gameWidthScale, gameHeightScale);
+
+        trackerSprite = game.add.sprite((gameWidth * 0.75), (gameHeight * 0.33333333333), 'tracker');
+        trackerSprite.scale.setTo(gameWidthScale, gameHeightScale);
+
+        warriorSprite = game.add.sprite((gameWidth * 0.8125), (gameHeight * 0.33333333333), 'warrior');
+        warriorSprite.scale.setTo(gameWidthScale, gameHeightScale);
+
+        youngWomanSprite = game.add.sprite((gameWidth * 0.875), (gameHeight * 0.33333333333), 'youngWoman');
+        youngWomanSprite.scale.setTo(gameWidthScale, gameHeightScale);
+
+        dogText = game.add.text((gameWidth * 0.1), (gameHeight * 0.46666666666), 'PIES - przeszkadza listonoszowi w dostarczeniu listów do odbiorcy.', {
             font: '16px Arial', fill: '#ffffff'
         });
+        dogText.scale.setTo(gameWidthScale, gameHeightScale);
 
-        game.add.sprite(30, 350, 'dog');
+        dogSprite = game.add.sprite((gameWidth * 0.0375), (gameHeight * 0.46666666666), 'dog');
+        dogSprite.scale.setTo(gameWidthScale, gameHeightScale);
 
-        game.add.button(10, 450, 'jumpLeft', backInst);
-        game.add.button(630, 450, 'jumpRight', goInst2);
-        //game.add.sprite(30, 280, 'dog');
-        //game.add.button(10, 400, 'jumpLeft', foo2);
-        //game.add.button(600, 400, 'jumpRight', foo3);
+        instButton = game.add.button((gameWidth * 0.0125), (gameHeight * 0.83333333333), 'jumpLeft', backInst);
+        instButton.scale.setTo(gameWidthScale, gameHeightScale);
+        inst2Button = game.add.button((gameWidth * 0.9125), (gameHeight * 0.83333333333), 'jumpRight', goInst2);
+        inst2Button.scale.setTo(gameWidthScale, gameHeightScale);
     },
 
 
-    goBackToPreviousInstruction: function () {
+    backToMenu: function () {
         game.state.start('instruction');
     },
     moveToNextInstruction: function() {
@@ -48,11 +65,4 @@ function backInst() {
 }
 function goInst2() {
     instructionState1.moveToNextInstruction();
-}
-
-function foo2() {
-    instructionState.goBackToPreviousInstruction();
-}
-function foo3() {
-    instructionState.moveToNextInstruction();
 }

@@ -2,7 +2,8 @@ var playState = {
 
     create: function() {
 
-        game.add.image(0, 0, 'levelOneTilemap');
+        levelOneTilemap = game.add.image(0, 0, 'levelOneTilemap');
+        levelOneTilemap.scale.setTo(gameWidthScale, gameHeightScale);
 
         var dogs = game.add.group();
         for (i = 0; i < 2; i++) {
@@ -15,65 +16,71 @@ var playState = {
 
             var dogDirectionRandomizer = Math.ceil(Math.random() * 2);
             if (dogDirectionRandomizer === 1) {
-                dog.body.velocity.x = 100;
+                dog.body.velocity.x = 150 * gameWidthScale;
                 dog.play('right');
             } else {
-                dog.body.velocity.y = 100;
+                dog.body.velocity.y = 150 * gameWidthScale;
                 dog.play('down');
             }
 
             dog.body.collideWorldBounds = true;
 
             dogs.forEach(function (dog) {
-                dog.scale.setTo(1.3, 1.3);
+                dog.scale.setTo((gameWidthScale * 1.3), (gameHeightScale * 1.3));
             });
             group = dogs;
         }
 
         var invisibleWalls = game.add.group();
         for(i = 0; i < 6; i++) {
-            inviWall = invisibleWalls.create(i * 32, 288, 'invisibleWall');
+            inviWall = invisibleWalls.create((i * ((gameWidth * 0.04))), (gameHeight * 0.48), 'invisibleWall');
             game.physics.enable(inviWall);
+            inviWall.scale.setTo(gameWidthScale,gameHeightScale);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
 
             group2 = invisibleWalls;
         }
         for(i = 1; i <= 2; i++) {
-            inviWall = invisibleWalls.create(160, 288 + (i * 32), 'invisibleWall');
+            inviWall = invisibleWalls.create(((gameWidth * 0.2)), ((gameHeight * 0.48) + (i * (gameHeight * 0.05333333333))), 'invisibleWall');
             game.physics.enable(inviWall);
+            inviWall.scale.setTo(gameWidthScale,gameHeightScale);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
 
             group2 = invisibleWalls;
         }
         for(i = 0; i < 5; i++) {
-            inviWall = invisibleWalls.create(i * 32, 384, 'invisibleWall' );
+            inviWall = invisibleWalls.create(((i * (gameWidth * 0.04))), ((gameHeight * 0.64)), 'invisibleWall' );
             game.physics.enable(inviWall);
+            inviWall.scale.setTo(gameWidthScale,gameHeightScale);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
 
             group2 = invisibleWalls;
         }
         for(i = 0; i < 3; i++) {
-            inviWall = invisibleWalls.create(256 + (i * 32), 576 - (i * 32), 'invisibleWall' );
+            inviWall = invisibleWalls.create(((gameWidth * 0.32) + (i * (gameWidth * 0.04))), ((gameHeight * 0.96) - (i * (gameHeight * 0.05333333333))), 'invisibleWall' );
             game.physics.enable(inviWall);
+            inviWall.scale.setTo(gameWidthScale,gameHeightScale);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
 
             group2 = invisibleWalls;
         }
         for(i = 0; i < 2; i++) {
-            inviWall = invisibleWalls.create(320 + (i * 32), 480, 'invisibleWall' );
+            inviWall = invisibleWalls.create(((gameWidth * 0.4) + (i * (gameWidth * 0.04))), (gameHeight * 0.8), 'invisibleWall' );
             game.physics.enable(inviWall);
+            inviWall.scale.setTo(gameWidthScale,gameHeightScale);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
 
             group2 = invisibleWalls;
         }
         for(i = 0; i < 3; i++) {
-            inviWall = invisibleWalls.create(384, 512 + (i * 32), 'invisibleWall' );
+            inviWall = invisibleWalls.create((gameWidth * 0.48), ((gameHeight * 0.85333333333) + (i * (gameHeight * 0.05333333333))), 'invisibleWall' );
             game.physics.enable(inviWall);
+            inviWall.scale.setTo(gameWidthScale,gameHeightScale);
             inviWall.body.immovable = true;
             inviWall.collideWorldBounds = true;
 
@@ -90,19 +97,23 @@ var playState = {
         player.animations.add('down', [1, 2, 3], 7, true);
 
         game.physics.arcade.enable(player);
-        player.body.setSize(23, 17, 0, 26);
+        player.body.setSize((gameWidth * 0.02875), (gameHeight * 0.02833333333), 0, (gameHeight * 0.04333333333));
 
         cursors = game.input.keyboard.createCursorKeys();
 
         player.body.collideWorldBounds = true;
 
-        player.scale.setTo(1.3, 1.3);
+        player.scale.setTo((gameWidthScale * 1.3), (gameHeightScale * 1.3));
         
         createRandomReceivent();
 
+        game.world.bringToTop(player);
         scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
-        envelopeNumberCounter = game.add.text(0, 25, "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
-        timeLeftCounter = game.add.text(680, 0, 'Time left: ' + seconds, {font: '20px Arial', fill: '#ffffff'});
+        scoreCounter.scale.setTo(gameWidthScale, gameHeightScale);
+        envelopeNumberCounter = game.add.text(0, Math.round(gameHeight * 0.04166666666), "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
+        envelopeNumberCounter.scale.setTo(gameWidthScale, gameHeightScale);
+        timeLeftCounter = game.add.text(Math.round(gameWidth * 0.85), 0, 'Time left: ' + seconds, {font: '20px Arial', fill: '#ffffff'});
+        timeLeftCounter.scale.setTo(gameWidthScale, gameHeightScale);
 
         envelopeSound = game.add.audio('collectEnvelopeSound');
         startGameTimer();
@@ -112,19 +123,19 @@ var playState = {
         game.physics.arcade.overlap(player, envelope, collectEnvelope, null, this);
         player.body.velocity.set(0);
         if (cursors.left.isDown) {
-            player.body.velocity.x = -100 * envelopeBurden;
+            player.body.velocity.x = -150 * envelopeBurden * gameWidthScale;
             player.play('left');
         }
         else if (cursors.right.isDown) {
-            player.body.velocity.x = 100 * envelopeBurden;
+            player.body.velocity.x = 150 * envelopeBurden * gameWidthScale;
             player.play('right');
         }
         else if (cursors.up.isDown) {
-            player.body.velocity.y = -100 * envelopeBurden;
+            player.body.velocity.y = -150 * envelopeBurden * gameWidthScale;
             player.play('up');
         }
         else if (cursors.down.isDown) {
-            player.body.velocity.y = 100 * envelopeBurden;
+            player.body.velocity.y = 150 * envelopeBurden * gameWidthScale;
             player.play('down');
         } else {
             player.animations.stop();
@@ -132,19 +143,19 @@ var playState = {
         }
         group.forEach(function (dog){
             game.physics.arcade.overlap(player, dog, killPlayer, null, this);
-            if (dog.x === 758.4) {
-                dog.body.velocity.x = -100;
+            if (dog.x === (gameWidth * 0.948)) {
+                dog.body.velocity.x = -150 * gameWidthScale;
                 dog.play('left');
             } else if (dog.x === 0) {
-                dog.body.velocity.x = 100;
+                dog.body.velocity.x = 150 * gameWidthScale;
                 dog.play('right');
             }
-            else if (dog.y === 558.4) {
-                dog.body.velocity.y = -100;
+            else if (dog.y > parseFloat((gameHeight * 0.920666666667).toFixed(1))) {
+                dog.body.velocity.y = -150 * gameWidthScale;
                 dog.play('up');
             }
             else if (dog.y === 0) {
-                dog.body.velocity.y = 100;
+                dog.body.velocity.y = 150 * gameWidthScale;
                 dog.play('down');
             }
         });
@@ -153,15 +164,21 @@ var playState = {
         });
         game.physics.arcade.collide(randomReceivent, player, giveInEnvelopes);
             if (player.exists === false) {
-                levelOneLayout.dogXLayout = [224, 416, 608];
-                levelOneLayout.dogYLayout = [224, 416];
+                levelOneLayout.dogXLayout = [Math.round(gameWidth * 0.28), Math.round(gameWidth * 0.52), Math.round(gameWidth * 0.76)];
+                levelOneLayout.dogYLayout = [Math.round(gameHeight * 0.37333333333), Math.round(gameHeight * 0.69333333333)];
+                scoreValue = 0;
+                envelopeValue = 0;
+                scoreMultiplier = 1;
+                envelopeBurden = 1;
+                seconds = 60;
+                scoreBonus = 0;
+                noRep = 0;
                 game.state.start('lose');
             }
             if (envelope.exists === false) {
                 createEnvelope();
                 envelopeSound.play();
                 game.world.bringToTop(player);
-                game.world.bringToTop(randomReceivent);
                 scoreValue += 10 * scoreMultiplier;
                 envelopeValue += 1;
                 scoreCounter.text = 'Score: ' + scoreValue.toFixed(0);
@@ -171,8 +188,8 @@ var playState = {
                 animationSpeedUp += 1;
                 noRep += 1;
                 if (noRep === 1) {
-                    levelOneLayout.envelopeYLayout = [160, 320, 480];
-                    levelOneLayout.envelopeXLayout = [320, 512];
+                    levelOneLayout.envelopeYLayout = [Math.round(gameWidth * 0.1), Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.3), Math.round(gameWidth * 0.4), Math.round(gameWidth * 0.5)];
+                    levelOneLayout.envelopeXLayout = [Math.round(gameHeight * 0.53333333333), Math.round(gameHeight * 0.85333333333)];
                     noRep = 0;
                 }
             }
@@ -187,16 +204,20 @@ var animationSpeedUp = 0;
 var noRep = 0;
 var seconds = 60;
 var scoreBonus = 0;
+var gameWidth = Math.round((window.innerWidth * 0.416666666667));
+var gameWidthScale = gameWidth / 800;
+var gameHeight = Math.round(((window.innerWidth * 0.416666666667) * 0.75));
+var gameHeightScale = gameHeight / 600;
 
 var levelOneLayout = {
-    dogXLayout: [224, 416, 608],
-    dogYLayout: [224, 416],
-    playerXLayout: [128, 704],
-    playerYLayout: [128, 512],
-    envelopeXLayout: [320, 512],
-    envelopeYLayout: [160, 320, 480],
-    randomRecXLayout: [160, 640],
-    randomRecYLayout: [128, 512]
+    dogXLayout: [Math.round(gameWidth * 0.28), Math.round(gameWidth * 0.52), Math.round(gameWidth * 0.76)],
+    dogYLayout: [Math.round(gameHeight * 0.37333333333), Math.round(gameHeight * 0.69333333333)],
+    playerXLayout: [Math.round(gameWidth * 0.16), Math.round(gameWidth * 0.88)],
+    playerYLayout: [Math.round(gameHeight * 0.21333333333), Math.round(gameHeight * 0.85333333333)],
+    envelopeXLayout: [Math.round(gameHeight * 0.53333333333), Math.round(gameHeight * 0.85333333333)],
+    envelopeYLayout: [Math.round(gameWidth * 0.1), Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.3), Math.round(gameWidth * 0.5)],
+    randomRecXLayout: [Math.round(gameWidth * 0.2), Math.round(gameWidth * 0.8)],
+    randomRecYLayout: [Math.round(gameHeight * 0.21333333333), Math.round(gameHeight * 0.85333333333)]
 };
 
 function getAndRemoveFromArray(arr) {
@@ -215,8 +236,12 @@ function collectEnvelope(player, envelope) {
 
 function createEnvelope() {
     envelope = game.add.sprite(getAndRemoveFromArray(levelOneLayout.envelopeXLayout), getAndRemoveFromArray(levelOneLayout.envelopeYLayout), 'envelope');
-    envelope.scale.setTo(0.6, 0.6);
+    envelope.scale.setTo((gameWidthScale * 0.6), (gameHeightScale * 0.6));
     game.physics.arcade.enable(envelope);
+    envelope.bringToTop();
+    group2.forEach(function (dog) {
+        dog.bringToTop();
+    });
 }
 
 function giveInEnvelopes() {
@@ -228,6 +253,7 @@ function giveInEnvelopes() {
         scoreBonus = 0;
         randomReceivent.kill();
         createRandomReceivent();
+        game.world.bringToTop(player);
     }
 }
 
@@ -239,8 +265,8 @@ function startGameTimer() {
         if (player.exists === false) {
             clearInterval(gameTimer);
         } else if (seconds === 0) {
-            levelOneLayout.dogXLayout = [224, 416, 608];
-            levelOneLayout.dogYLayout = [224, 416];
+            levelOneLayout.dogXLayout = [Math.round(gameWidth * 0.28), Math.round(gameWidth * 0.52), Math.round(gameWidth * 0.76)];
+            levelOneLayout.dogYLayout = [Math.round(gameHeight * 0.37333333333), Math.round(gameHeight * 0.69333333333)];
             game.state.start('win');
         }
     }, 1000);
@@ -250,33 +276,28 @@ function createRandomReceivent() {
     randomRecRandomizer = Math.floor(Math.random() * 5);
     if (randomRecRandomizer === 0) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'darkman');
-        randomReceivent.scale.setTo(1.2, 1.2);
+        randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(23, 17, 0, 26);
     } else if (randomRecRandomizer === 1) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'nutcracker');
-        randomReceivent.scale.setTo(1.2, 1.2);
+        randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(23, 17, 0, 26);
     } else if (randomRecRandomizer === 2) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'tracker');
-        randomReceivent.scale.setTo(1.2, 1.2);
+        randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(23, 17, 0, 26);
     } else if (randomRecRandomizer === 3) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'warrior');
-        randomReceivent.scale.setTo(1.2, 1.2);
+        randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(23, 17, 0, 26);
     } else if (randomRecRandomizer === 4) {
         randomReceivent = game.add.sprite(levelOneLayout.randomRecXLayout[Math.floor(Math.random() * levelOneLayout.randomRecXLayout.length)], levelOneLayout.randomRecYLayout[Math.floor(Math.random() * levelOneLayout.randomRecYLayout.length)], 'youngWoman');
-        randomReceivent.scale.setTo(1.2, 1.2);
+        randomReceivent.scale.setTo((gameWidthScale * 1.2), (gameHeightScale * 1.2));
         game.physics.arcade.enable(randomReceivent);
         randomReceivent.body.immovable = true;
-        randomReceivent.body.setSize(23, 17, 0, 26);
     }
 }
