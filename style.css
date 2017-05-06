@@ -473,10 +473,10 @@ label.css-label {
 }
 
 .show-game-shown {
-    position: fixed;
-    top: 97.5%;
-    left: 0;
-    height: 25px;
+    height: 2em;
+    width: 120px;
+    font-size: 1em;
+    margin: 0 auto;
     padding: 2px;
     background-color: #e3edea;
 }

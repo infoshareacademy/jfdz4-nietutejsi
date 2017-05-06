@@ -31,6 +31,9 @@ $( document ).ready(function() {
             return false;
         } else
         {
+            $('#newsletter').hide();
+            $('#newsletterThanks').removeClass('hidden');
+            $('.sign-up-wrapper').hide();
             $('#game-handler').removeClass('hidden');
             $('#game-handler').addClass('game-handler-shown');
             $('.dimmer-shown').removeClass('hidden');
