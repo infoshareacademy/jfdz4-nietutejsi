@@ -15,7 +15,6 @@ body {
     max-height: 900px;
     min-height: 399px;
 }
-
 .wow {
     visibility: hidden;
     display: flex;
@@ -140,6 +139,7 @@ body {
         border-bottom: 3px solid #dedede;
     }
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1001px) {
     .navbar-default .navbar-nav > li > a {
