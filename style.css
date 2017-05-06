@@ -214,6 +214,7 @@ div.one p {
 }
 
 .osoba-img {
+    max-width: 280px;
     height: 280px;
     margin: 30px auto 10px auto;
     perspective: 300px;
@@ -222,7 +223,8 @@ div.one p {
 
 .osoba-obr {
     position: relative;
-    height: 280px;
+    width: 100%;
+    height: 100%;
     text-align: center;
     transition: 2s;
     -webkit-transition: 2s;
@@ -236,8 +238,8 @@ div.one p {
 }
 .front-img {
     position: absolute;
-    /*width: 100%;*/
-    /*height: 100%;*/
+    width: 100%;
+    height: 100%;
     background-size: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -462,32 +464,32 @@ label.css-label {
 }
 
 .hide-game {
-  position: absolute;
-  top:0;
-  left:0;
-  background: url('assets/buttons/hideGame.png');
-  width: 25px;
-  height: 25px;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url('assets/buttons/hideGame.png');
+    width: 25px;
+    height: 25px;
 }
 
 .show-game-shown {
-  position: fixed;
-  top: 97.5%;
-  left: 0;
-  height: 25px;
-  padding: 2px;
-  background-color: #e3edea;
+    position: fixed;
+    top: 97.5%;
+    left: 0;
+    height: 25px;
+    padding: 2px;
+    background-color: #e3edea;
 }
 
 .dimmer-shown {
-  background:#000;
-  opacity:0.5;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:9999;
+    background:#000;
+    opacity:0.5;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:9999;
 }
 
 .game-handler-center {
