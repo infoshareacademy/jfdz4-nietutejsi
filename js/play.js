@@ -108,11 +108,11 @@ var playState = {
         createRandomReceivent();
 
         game.world.bringToTop(player);
-        scoreCounter = game.add.text(0, 0, "Score: 0", {font: '20px Arial', fill: '#ffffff'});
+        scoreCounter = game.add.text(0, 0, "Punkty: 0", {font: '20px Arial', fill: '#ffffff'});
         scoreCounter.scale.setTo(gameWidthScale, gameHeightScale);
-        envelopeNumberCounter = game.add.text(0, Math.round(gameHeight * 0.04166666666), "Envelopes: 0", {font: '20px Arial', fill: '#ffffff'});
+        envelopeNumberCounter = game.add.text(0, Math.round(gameHeight * 0.04166666666), "Koperty: 0", {font: '20px Arial', fill: '#ffffff'});
         envelopeNumberCounter.scale.setTo(gameWidthScale, gameHeightScale);
-        timeLeftCounter = game.add.text(Math.round(gameWidth * 0.85), 0, 'Time left: ' + seconds, {font: '20px Arial', fill: '#ffffff'});
+        timeLeftCounter = game.add.text(Math.round(gameWidth * 0.85), 0, 'Czas: ' + seconds, {font: '20px Arial', fill: '#ffffff'});
         timeLeftCounter.scale.setTo(gameWidthScale, gameHeightScale);
 
         envelopeSound = game.add.audio('collectEnvelopeSound');
@@ -181,9 +181,9 @@ var playState = {
                 game.world.bringToTop(player);
                 scoreValue += 10 * scoreMultiplier;
                 envelopeValue += 1;
-                scoreCounter.text = 'Score: ' + scoreValue.toFixed(0);
+                scoreCounter.text = 'Punkty: ' + scoreValue.toFixed(0);
                 scoreMultiplier += 0.2;
-                envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
+                envelopeNumberCounter.text = 'Koperty: ' + envelopeValue;
                 envelopeBurden -= 0.1;
                 animationSpeedUp += 1;
                 noRep += 1;
@@ -248,7 +248,7 @@ function giveInEnvelopes() {
     if(envelopeValue >= 1) {
         envelopeValue = 0;
         envelopeBurden = 1;
-        envelopeNumberCounter.text = 'Envelopes: ' + envelopeValue;
+        envelopeNumberCounter.text = 'Koperty: ' + envelopeValue;
         scoreMultiplier = 1;
         scoreBonus = 0;
         randomReceivent.kill();
@@ -260,7 +260,7 @@ function giveInEnvelopes() {
 function startGameTimer() {
     seconds = 60;
     gameTimer = setInterval(function() {
-        timeLeftCounter.text = 'Time left: ' + seconds;
+        timeLeftCounter.text = 'Czas: ' + seconds;
         seconds -= 1;
         if (player.exists === false) {
             clearInterval(gameTimer);
