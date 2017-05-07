@@ -31,6 +31,9 @@ $( document ).ready(function() {
             return false;
         } else
         {
+            setTimeout(function () {
+                $('#game-handler').css('height', ($('#game-handler').width() * 0.75));
+            }, 1);
             $('#newsletter').hide();
             $('#newsletterThanks').removeClass('hidden');
             $('.sign-up-wrapper').hide();
