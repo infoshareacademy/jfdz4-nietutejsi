@@ -27,7 +27,6 @@ $( document ).ready(function() {
         var dotpos = x.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
             alert("Nieprawidłowy adres e-mail");
-            $('.users-email').val('');
             return false;
         } else
         {
