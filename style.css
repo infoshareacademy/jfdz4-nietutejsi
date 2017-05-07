@@ -528,7 +528,7 @@ label.css-label {
 
 @media (min-width: 1200px) {
     .game-handler-shown>h2 {
-        margin-top: 3.750em;
+        margin-top: 3em;
         font-size: 1.5em;
     }
 }
