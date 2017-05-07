@@ -1,6 +1,7 @@
 var menuState = {
 
     create: function () {
+        game.stage.backgroundColor = '#8FD8D2';
         
         var startButton = game.add.button(Math.round((gameWidth * 0.37625)), Math.round((game.world.height - (gameHeight * 0.26666666666))), 'beginGameButton', gameStartOnClick, this);
         startButton.scale.setTo(gameWidthScale, gameHeightScale);

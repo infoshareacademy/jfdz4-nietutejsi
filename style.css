@@ -435,11 +435,6 @@ label.css-label {
     z-index: 99999;
 }
 
-.game-handler-shown>h2 {
-    margin-top: 3.750em;
-    font-size: 1.5em;
-}
-
 .game-handler-shown>p {
     text-align: center;
     font-size: 1em;
@@ -473,10 +468,10 @@ label.css-label {
 }
 
 .show-game-shown {
-    position: fixed;
-    top: 97.5%;
-    left: 0;
-    height: 25px;
+    height: 2em;
+    width: 120px;
+    font-size: 1em;
+    margin: 0 auto;
     padding: 2px;
     background-color: #e3edea;
 }
@@ -525,6 +520,20 @@ label.css-label {
 
 ::-webkit-input-placeholder {
     text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .game-handler-shown>h2 {
+        margin-top: 3.750em;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .game-handler-shown>h2 {
+        margin-top: 0;
+        font-size: 1.5em;
+    }
 }
 
 @media (max-width: 768px) {
