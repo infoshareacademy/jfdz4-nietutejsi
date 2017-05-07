@@ -572,7 +572,7 @@ label.css-label {
     }
 
     .game-handler-shown>h2 {
-        margin-top: 3.750em;
+        margin-top: 0;
         font-size: 1em;
     }
 
