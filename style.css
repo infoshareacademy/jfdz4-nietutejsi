@@ -37,10 +37,12 @@ img.myphoto:hover {
 }
 .osoba-opis{
     text-align: justify;
+    font-size: 18px;
 }
 .slider {
     position: relative;
 }
+
 
 h2 {
     padding-bottom: 20px;
@@ -219,6 +221,7 @@ div.one p {
     margin: 30px auto 10px auto;
     perspective: 300px;
     -webkit-perspective: 300px;
+    position: relative;
 }
 
 .osoba-obr {
