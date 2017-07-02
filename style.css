@@ -48,12 +48,22 @@ h2 {
 }
 
 .zajawka-btn a {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
-
+.zajawka-btn2 a {
+    font-size: 1.3em;
+}
 .zajawka-btn {
     position: absolute;
     top: 70%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.zajawka-btn2 {
+    position: absolute;
+    top: 60%;
     left: 0;
     right: 0;
     margin: 0 auto;
